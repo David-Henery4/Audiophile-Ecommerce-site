@@ -1,0 +1,69 @@
+body {
+  font-family: $fontFamily;
+  color: $black;
+}
+
+.bodyText {
+  font-size: 15px;
+  font-weight: $fontWeightMedium;
+  line-height: 25px;
+}
+
+.h1Style{
+  font-size: 56px;
+  font-weight: $fontWeightBold;
+  line-height: 58px;
+  letter-spacing: 2px;
+  color: $white;
+}
+
+.h2style{
+  font-size: 40px;
+  font-weight: $fontWeightBold;
+  line-height: 44px;
+  letter-spacing: 1.5px;
+}
+
+.h3style{
+  font-size: 32px;
+  font-weight: $fontWeightBold;
+  line-height: 36px;
+  letter-spacing: 1.15px;
+}
+
+.h4style{
+  font-size: 28px;
+  font-weight: $fontWeightBold;
+  line-height: 38px;
+  letter-spacing: 2px;
+}
+
+.h5style{
+  font-size: 24px;
+  font-weight: $fontWeightBold;
+  line-height: 33px;
+  letter-spacing: 1.7px;
+}
+
+.h6style{
+  font-size: 18px;
+  font-weight: $fontWeightBold;
+  line-height: 24px;
+  letter-spacing: 1.3px;
+}
+
+.overline{
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 10px;
+  font-weight: $fontWeightRegular;
+  color: $colourPrimary;
+}
+
+.sub-title-style{
+  font-size: 13px;
+  line-height: 25px;
+  letter-spacing: 1px;
+  color: $colourPrimary;
+  font-weight: $fontWeightBold;
+}
