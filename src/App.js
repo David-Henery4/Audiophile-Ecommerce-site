@@ -1,11 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import {Category, Checkout, Home, Product} from "./pages";
+import {Category, Checkout, Home, Product} from "./pages"; // will add all to router
+import {Navbar, Footer} from "./layout"
 
 
 function App() {
   return (
-    <div className="App">
-      <h1>APP!!!!!</h1>
+    <div className="App main-layout">
+      <Navbar/>
+      <Home/>
+      <Footer/>
     </div>
   );
 }
