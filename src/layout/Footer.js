@@ -7,8 +7,9 @@ import {Logo, Facebook, Instagram, Twitter} from "../assets/svgsComps";
 const Footer = () => {
   return (
     <footer className="footer">
-      <Logo />
-      <ul className="footer-links">
+      <div className="footer__line"></div>
+      <Logo className="footer__logo" />
+      <ul className="footer-links sub-title-style">
         {linkListData.map((li) => {
           return (
             <li key={li.id} className="footer-links__link">
@@ -17,13 +18,15 @@ const Footer = () => {
           );
         })}
       </ul>
-      <p className="footer__desc">
+      <p className="footer__desc body-text">
         Audiophile is an all in one stop to fulfill your audio needs. We're a
         small team of music lovers and sound specialists who are devoted to
         helping you get the most out of personal audio. Come and visit our demo
         facility - we’re open 7 days a week.
       </p>
-      <p className="footer__copyright">Copyright 2022. All Rights Reserved</p>
+      <p className="footer__copyright body-text">
+        Copyright 2022. All Rights Reserved
+      </p>
       <div className="footer-socials">
         <Facebook className="footer-socials__icon" />
         <Twitter className="footer-socials__icon" />

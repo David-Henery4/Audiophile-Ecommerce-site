@@ -1,3 +1,24 @@
-.btnBasic {
-  
+.btn-basic-1,
+.btn-basic-2,
+.btn-basic-3{
+  width: 160px;
+  height: 48px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: $fontWeightBold;
+  border: none;
+  font-family: $fontFamily;
+}
+
+.btn-basic-1{
+  background-color: $colourPrimary;
+  color: $white;
+}
+.btn-basic-2{
+  background-color: transparent;
+  border: 1.6px solid $black;
+}
+.btn-basic-3{
+  background-color: $black;
+  color: $white;
 }
