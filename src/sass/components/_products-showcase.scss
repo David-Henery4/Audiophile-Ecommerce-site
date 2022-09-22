@@ -1,67 +1,57 @@
 .products {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  @include flex-cen-cen-col;
   gap: 2rem;
   padding-bottom: 10rem; // temp
-  &-box{
+  &-box {
     width: 100%;
   }
   // BOX #1
-  &-box-1{
+  &-box-1 {
     position: relative;
     background-color: $colourPrimary;
     border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    @include flex-cen-cen-col;
     gap: 3rem;
     padding: 6rem 2rem;
     text-align: center;
     color: $white;
-    &__pattern{
+    &__pattern {
       position: absolute;
       top: 0;
       left: 0;
       max-width: 100%;
       height: 100%;
     }
-    &__image{
+    &__image {
       width: 17rem;
     }
-    &__title{
+    &__title {
       font-size: 3.6rem;
       line-height: 40px;
       letter-spacing: 1.29px;
       text-transform: uppercase;
       margin-top: 1.5rem;
-      span{
+      span {
         display: block;
       }
     }
-    &__text{
-      
+    &__text {
     }
-    &__btn{
-      
+    &__btn {
     }
   }
   //
   // BOX #2
-  &-box-2{
+  &-box-2 {
     padding: 11.65rem 2rem;
     position: relative;
     border-radius: 8px;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
+    @include flex-cen-cen-col;
     align-items: flex-start;
-    flex-direction: column;
     gap: 3.2rem;
-    &__image{
+    &__image {
       position: absolute;
       top: 0;
       left: 0;
@@ -69,49 +59,41 @@
       height: 100%;
       z-index: -5;
     }
-    &__title{
+    &__title {
       text-transform: uppercase;
     }
-    &__btn{
-      
+    &__btn {
     }
   }
   //
   // BOX #3
-  &-box-3{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  &-box-3 {
+    @include flex-cen-cen-col;
     gap: 2rem;
     &-side-1,
-    &-side-2{
+    &-side-2 {
       width: 100%;
       height: 20.1rem;
     }
-    &-side-1{
-      
+    &-side-1 {
     }
-    &-side-2{
+    &-side-2 {
       padding: 1rem 3rem;
       background-color: $lightGrey;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 3.2rem;
-    border-radius: 8px;
+      @include flex-cen-cen-col;
+      align-items: flex-start;
+      gap: 3.2rem;
+      border-radius: 8px;
     }
-    &__image{
+    &__image {
       border-radius: 8px;
       width: 100%;
       height: 100%;
     }
-    &__title{
+    &__title {
       text-transform: uppercase;
     }
-    &__btn{
-      
+    &__btn {
     }
   }
 }

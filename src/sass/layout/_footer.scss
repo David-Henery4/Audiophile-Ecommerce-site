@@ -5,7 +5,7 @@
   background-color: $black;
   display: grid;
   grid-template-columns: 1fr repeat(8, minmax(min-content, 11%)) 1fr;
-  gap: 4rem;
+  row-gap: 4rem;
   text-align: center;
   &__line{
     grid-column: 2/10;

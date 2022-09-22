@@ -1,11 +1,9 @@
 .about {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex-cen-cen-col;
   gap: 4rem;
   text-align: center;
+  padding-bottom: 10rem;
   &__image{
     width: 100%;
     border-radius: 8px;
