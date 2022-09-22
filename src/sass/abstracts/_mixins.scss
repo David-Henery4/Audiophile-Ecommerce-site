@@ -2,8 +2,13 @@
 // MEDIA QUERY MANAGER
 
 @mixin respond($breakpoint) {
+  @if ($breakpoint == lrgMob) {
+    @media (min-width: 28.12em) { // 450px
+      @content
+    }
+  };
   @if ($breakpoint == tab) {
-    @media (min-width: 700px) {
+    @media (min-width: 43.75em) { // 700px
       @content
     }
   };
