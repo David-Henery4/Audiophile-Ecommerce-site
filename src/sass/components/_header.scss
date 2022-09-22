@@ -30,15 +30,16 @@
     grid-column: 2/16;
     grid-row: 7/10;
     text-align: center;
-    // display: inline-flex;
-    // align-items: center;
     justify-self: center;
     align-self: center;
-    // mob (Maybe temp)
     font-size: 3.6rem;
     line-height: 4rem;
+    color: $white;
     letter-spacing: .129rem;
     text-transform: uppercase;
+    @include respond(tab){
+      @include h1-style;
+    }
     span{
       display: block;
     }

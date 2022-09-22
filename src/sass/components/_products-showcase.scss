@@ -2,7 +2,7 @@
   width: 100%;
   @include flex-cen-cen-col;
   gap: 2rem;
-  padding-bottom: 10rem; // temp
+  padding-bottom: 7rem; // temp
   &-box {
     width: 100%;
   }
@@ -16,6 +16,9 @@
     padding: 6rem 2rem;
     text-align: center;
     color: $white;
+    &__images-wrap{
+      position: relative;
+    }
     &__pattern {
       position: absolute;
       top: 0;
@@ -31,12 +34,19 @@
       line-height: 40px;
       letter-spacing: 1.29px;
       text-transform: uppercase;
-      margin-top: 1.5rem;
+      // margin-top: 1.5rem;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 15px;
+      @include respond(tab){
+        @include h1-style;
+      }
       span {
         display: block;
       }
     }
     &__text {
+      max-width: 349px;
     }
     &__btn {
     }
@@ -44,13 +54,14 @@
   //
   // BOX #2
   &-box-2 {
-    padding: 11.65rem 2rem;
+    height: 320px;
+    padding: 0rem 2rem;
     position: relative;
     border-radius: 8px;
     overflow: hidden;
     @include flex-cen-cen-col;
     align-items: flex-start;
-    gap: 3.2rem;
+    gap: 20px;
     &__image {
       position: absolute;
       top: 0;
@@ -58,9 +69,11 @@
       width: 100%;
       height: 100%;
       z-index: -5;
+      object-fit: fill;
     }
     &__title {
       text-transform: uppercase;
+      @include h4-style;
     }
     &__btn {
     }
@@ -70,10 +83,17 @@
   &-box-3 {
     @include flex-cen-cen-col;
     gap: 2rem;
+    @include respond (tab){
+      flex-direction: row;
+      gap: 1rem;
+    }
     &-side-1,
     &-side-2 {
       width: 100%;
       height: 20.1rem;
+      @include respond(tab){
+        width: 50%;
+      }
     }
     &-side-1 {
     }
@@ -92,6 +112,7 @@
     }
     &__title {
       text-transform: uppercase;
+      @include h4-style;
     }
     &__btn {
     }

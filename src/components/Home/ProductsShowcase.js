@@ -1,6 +1,7 @@
 import React from "react";
 import { Product1Img, Product2Img, Product3Img } from "../../assets/home/mobile";
 import {ProductPattern} from "../../assets/home/desktop";
+import {ShowcaseImg2Tab} from "../../assets/home/tablet";
 
 const ProductsShowcase = () => {
   return (
@@ -24,12 +25,15 @@ const ProductsShowcase = () => {
       </div>
       {/**/}
       <div className="products-box products-box-2">
+        <picture>
+          <source srcSet={ShowcaseImg2Tab} media="(min-width:43.75em)" />
         <img
           className="products-box-2__image"
           src={Product2Img}
           alt="speaker-product-2"
         />
-        <h4 className="products-box-2__title h4-style">ZX7 speaker</h4>
+        </picture>
+        <h4 className="products-box-2__title">ZX7 speaker</h4>
         <button className="products-box-2__btn btn-basic-2">SEE PRODUCT</button>
       </div>
       {/**/}
@@ -42,7 +46,7 @@ const ProductsShowcase = () => {
           />
         </div>
         <div className="products-box-3-side-2">
-          <h4 className="products-box-3__title h4-style">YX1 earphones</h4>
+          <h4 className="products-box-3__title">YX1 earphones</h4>
           <button className="products-box-3__btn btn-basic-2">
             SEE PRODUCT
           </button>

@@ -5,18 +5,31 @@
   background-color: $black;
   display: grid;
   grid-template-columns: 1fr repeat(8, minmax(min-content, 11%)) 1fr;
-  row-gap: 4rem;
+  row-gap: 40px;
   text-align: center;
-  &__line{
+  @include respond(tab) {
+    padding-bottom: 2rem;
+  }
+  &__line {
     grid-column: 2/10;
     height: 4px;
     width: 101px;
     background-color: $colourPrimary;
     justify-self: center;
+    @include respond(tab) {
+      grid-column: 2/4;
+      grid-row: 1/2;
+      justify-self: left;
+    }
   }
   &__logo {
     grid-column: 2/10;
     justify-self: center;
+    @include respond(tab) {
+      grid-column: 2/4;
+      grid-row: 2/3;
+      justify-self: left;
+    }
   }
   &-links {
     grid-column: 2/10;
@@ -27,15 +40,32 @@
     flex-direction: column;
     gap: 1.6rem;
     color: $white;
+    @include respond(tab) {
+      grid-column: 2/9;
+      grid-row: 3/4;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
   }
   &__link {
   }
   &__desc {
     grid-column: 2/10;
+    @include respond(tab) {
+      grid-column: 2/9;
+      grid-row: 4/7;
+      text-align: left;
+      margin-bottom: 60px;
+    }
   }
   &__copyright {
     grid-column: 2/10;
     font-weight: $fontWeightBold;
+    @include respond(tab) {
+      grid-column: 2/8;
+      grid-row: 7/8;
+      justify-self: flex-start;
+    }
   }
   &-socials {
     grid-column: 2/10;
@@ -43,6 +73,11 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+    @include respond(tab) {
+      grid-column: 7/10;
+      grid-row: 7/8;
+      justify-content: flex-end;
+    }
     &__icon {
     }
   }

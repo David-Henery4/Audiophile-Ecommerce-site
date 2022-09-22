@@ -12,6 +12,11 @@
       @content
     }
   };
+  @if ($breakpoint == lap) {
+    @media (min-width: 95.37em) { // 950px
+      @content
+    }
+  };
 }
 
 

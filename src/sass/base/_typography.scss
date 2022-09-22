@@ -9,49 +9,6 @@ body {
   line-height: 25px;
 }
 
-.h1-style{
-  font-size: 56px;
-  font-weight: $fontWeightBold;
-  line-height: 58px;
-  letter-spacing: 2px;
-  color: $white;
-}
-
-.h2-style{
-  font-size: 40px;
-  font-weight: $fontWeightBold;
-  line-height: 44px;
-  letter-spacing: 1.5px;
-}
-
-.h3-style{
-  font-size: 32px;
-  font-weight: $fontWeightBold;
-  line-height: 36px;
-  letter-spacing: 1.15px;
-}
-
-.h4-style{
-  font-size: 28px;
-  font-weight: $fontWeightBold;
-  line-height: 38px;
-  letter-spacing: 2px;
-}
-
-.h5-style{
-  font-size: 24px;
-  font-weight: $fontWeightBold;
-  line-height: 33px;
-  letter-spacing: 1.7px;
-}
-
-.h6-style{
-  font-size: 18px;
-  font-weight: $fontWeightBold;
-  line-height: 24px;
-  letter-spacing: 1.3px;
-}
-
 .overline{
   font-size: 14px;
   line-height: 19px;
@@ -67,3 +24,92 @@ body {
   color: $colourPrimary;
   font-weight: $fontWeightBold;
 }
+
+// HEADERS
+
+@mixin h1-style {
+  font-size: 56px;
+  font-weight: $fontWeightBold;
+  line-height: 58px;
+  letter-spacing: 2px;
+  color: $white;
+}
+
+.h1-style{
+  font-size: 56px;
+  font-weight: $fontWeightBold;
+  line-height: 58px;
+  letter-spacing: 2px;
+  color: $white;
+}
+
+@mixin h2-style {
+  font-size: 40px;
+  font-weight: $fontWeightBold;
+  line-height: 44px;
+  letter-spacing: 1.5px;
+}
+
+.h2-style{
+  font-size: 40px;
+  font-weight: $fontWeightBold;
+  line-height: 44px;
+  letter-spacing: 1.5px;
+}
+
+@mixin h3-style {
+  font-size: 32px;
+  font-weight: $fontWeightBold;
+  line-height: 36px;
+  letter-spacing: 1.15px;
+}
+
+.h3-style{
+  font-size: 32px;
+  font-weight: $fontWeightBold;
+  line-height: 36px;
+  letter-spacing: 1.15px;
+}
+
+@mixin h4-style {
+  font-size: 28px;
+  font-weight: $fontWeightBold;
+  line-height: 38px;
+  letter-spacing: 2px;
+}
+
+.h4-style{
+  font-size: 28px;
+  font-weight: $fontWeightBold;
+  line-height: 38px;
+  letter-spacing: 2px;
+}
+
+@mixin h5-style {
+  font-size: 24px;
+  font-weight: $fontWeightBold;
+  line-height: 33px;
+  letter-spacing: 1.7px;
+}
+
+.h5-style{
+  font-size: 24px;
+  font-weight: $fontWeightBold;
+  line-height: 33px;
+  letter-spacing: 1.7px;
+}
+
+@mixin h6-style {
+  font-size: 18px;
+  font-weight: $fontWeightBold;
+  line-height: 24px;
+  letter-spacing: 1.3px;
+}
+
+.h6-style{
+  font-size: 18px;
+  font-weight: $fontWeightBold;
+  line-height: 24px;
+  letter-spacing: 1.3px;
+}
+

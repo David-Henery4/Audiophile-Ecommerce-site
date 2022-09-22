@@ -14,7 +14,7 @@ const Header = () => {
       />
       </picture>
       <p className="header__tag overline">NEW PRODUCT</p>
-      <h1 className="header__title h1-style">
+      <h1 className="header__title">
         <span>XX99 Mark II </span> 
         Headphones</h1>
       <p className="header__desc body-text">

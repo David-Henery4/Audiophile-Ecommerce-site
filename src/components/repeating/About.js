@@ -1,11 +1,15 @@
 import React from "react";
 import AboutImgMob from "../../assets/shared/mobile/image-best-gear.jpg";
+import AboutImgTab from "../../assets/shared/tablet/image-best-gear.jpg";
 
 const About = () => {
   return (
     <section className="about">
-      <img className="about__image" src={AboutImgMob} alt="about-best-gear" />
-      <h2 className="about__title h4-style">
+      <picture>
+        <source srcSet={AboutImgTab} media="(min-width:43.75em)" />
+      <img className="about__image" srcSet={AboutImgMob} alt="about-best-gear" />
+      </picture>
+      <h2 className="about__title">
         Bringing you the
         <span> best </span>
         audio gear

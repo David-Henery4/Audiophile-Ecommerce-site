@@ -14,4 +14,7 @@ html{
   @include respond(tab){
     font-size: 87.5%;// 1rem === 14px
   }
+  @include respond (lap){
+    font-size: 100%; // 1rem === 16px
+  }
 }
