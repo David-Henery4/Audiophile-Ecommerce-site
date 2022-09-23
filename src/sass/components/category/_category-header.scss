@@ -1,0 +1,20 @@
+.category-header {
+  background-color: $black;
+  z-index: -1;
+  height: 192px;
+  display: grid;
+  place-items: center;
+  color: $white;
+  padding: 90px 0 0;
+  @include respond (tab){
+    height: 336px;
+  }
+  &__title {
+    font-size: 28px;
+    letter-spacing: 2px;
+    font-weight: $fontWeightBold;
+    @include respond (tab){
+      @include h2-style;
+    }
+  }
+}

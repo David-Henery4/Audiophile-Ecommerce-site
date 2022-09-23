@@ -7,7 +7,8 @@ function App() {
   return (
     <div className="App main-layout">
       <Navbar/>
-      <Home/>
+      {/* <Home/> */}
+      <Category/>
       <Footer/>
     </div>
   );

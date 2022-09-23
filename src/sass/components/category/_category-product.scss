@@ -1,0 +1,47 @@
+.category-product {
+  @include flex-cen-cen-col;
+  text-align: center;
+  gap: 32px;
+  padding-top: 6rem;
+  @include respond (lap){
+    flex-direction: row;
+    gap: 125px;
+    height: 560px;
+    text-align: left;
+    &:nth-child(even){
+      flex-direction: row-reverse;
+    }
+  }
+  &-image{
+    width: 100%;
+    @include respond (lap){
+      width: 50%;
+      height: 100%;
+    }
+    &__img{
+      width: 100%;
+      border-radius: 8px;
+    @include respond (lap){
+        height: 100%
+      }
+    }
+  }
+  &-content{
+    @include flex-cen-cen-col;
+    gap: 32px;
+    @include respond (lap){
+      align-items: flex-start;
+      width: 50%;
+    }
+  }
+  &__title{
+    font-size: 28px;
+    letter-spacing: 2px;
+    font-weight: $fontWeightBold;
+    @include respond (tab){
+      @include h2-style;
+    }
+  }
+  &__text{
+  }
+}
