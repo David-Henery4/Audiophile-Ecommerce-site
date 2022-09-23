@@ -5,7 +5,9 @@
 .main-layout {
   display: grid;
   grid-template-columns: 1fr repeat(8, minmax(min-content, 11%)) 1fr;
-  // grid-template-rows: 15vh 80vh; // header height dictated by image
+  @include respond(lrgDesk){
+    grid-template-columns: 1fr repeat(8, minmax(min-content, 138.75px)) 1fr;
+  }
 }
 
 .navbar{

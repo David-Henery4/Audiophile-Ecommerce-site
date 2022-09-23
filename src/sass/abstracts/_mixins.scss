@@ -17,6 +17,11 @@
       @content
     }
   };
+  @if ($breakpoint == lrgDesk) {
+    @media (min-width: 77.5em) { // 1240px
+      @content
+    }
+  };
 }
 
 
