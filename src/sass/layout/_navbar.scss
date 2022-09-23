@@ -7,7 +7,22 @@
   align-items: center;
   border-bottom: 1px solid $white;
   &-burger{
-    
+    @include respond (lap){
+      display: none;
+    }
+  }
+  &-links{
+    display: none;
+    list-style-type: none;
+    gap: 1.6rem;
+    color: $white;
+    // justify-content: flex-start;
+    @include respond (lap){
+      @include flex-cen-cen-col;
+      flex-direction: row;
+    }
+    &__link{
+    }
   }
   &-logo{
     

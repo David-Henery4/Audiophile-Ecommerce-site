@@ -12,12 +12,16 @@
     background-color: $colourPrimary;
     border-radius: 8px;
     @include flex-cen-cen-col;
-    gap: 3rem;
-    padding: 6rem 2rem;
+    gap: 4rem;
+    padding: 3rem 2rem;
     text-align: center;
     color: $white;
-    &__images-wrap{
-      position: relative;
+    overflow: hidden;
+    @include respond (lap){
+      height: 560px;
+      justify-content: space-between;
+      padding: 0 2rem;
+      flex-direction: row;
     }
     &__pattern {
       position: absolute;
@@ -26,8 +30,30 @@
       max-width: 100%;
       height: 100%;
     }
+    &__picture{
+      @include respond (lap){
+        align-self: flex-end;
+        width: 50%;
+      }
+    }
     &__image {
-      width: 17rem;
+      width: 14rem;
+      // height: 40%;
+      @include respond (lap){
+        width: 23rem;
+        position: relative;
+        top: 15px
+      }
+    }
+    &__text-wrap{
+      @include flex-cen-cen-col;
+      gap: 2rem;
+      @include respond (lap){
+        align-items: flex-start;
+        gap: 1.5rem;
+        text-align: left;
+        width: 40%;
+      }
     }
     &__title {
       font-size: 3.6rem;
@@ -37,7 +63,7 @@
       // margin-top: 1.5rem;
       display: inline-flex;
       flex-direction: column;
-      gap: 15px;
+      // gap: 5px;
       @include respond(tab){
         @include h1-style;
       }
@@ -62,6 +88,12 @@
     @include flex-cen-cen-col;
     align-items: flex-start;
     gap: 20px;
+    @include respond (tab){
+      padding:  0 4rem;
+    }
+    @include respond (tab){
+      padding:  0 5rem;
+    }
     &__image {
       position: absolute;
       top: 0;
@@ -69,7 +101,7 @@
       width: 100%;
       height: 100%;
       z-index: -5;
-      object-fit: fill;
+      object-fit: cover;
     }
     &__title {
       text-transform: uppercase;

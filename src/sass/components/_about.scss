@@ -4,9 +4,36 @@
   gap: 40px;
   text-align: center;
   padding-bottom: 7rem;
+  @include respond (lap){
+    flex-direction: row-reverse;
+    height: 588px;
+    gap: 125px;
+    padding-bottom: 5rem;
+  }
+  &__picture{
+    @include respond (lap){
+      height: 100%;
+      width: 50%;
+    }
+  }
   &__image{
     width: 100%;
     border-radius: 8px;
+    @include respond (lap){
+      height: 100%;
+    }
+  }
+  &-text-wrap{
+    @include flex-cen-cen-col;
+    gap: 32px;
+    @include respond(tab){
+      padding: 0 2rem;
+    }
+    @include respond(lap){
+      align-items: flex-start;
+      text-align: left;
+      width: 50%;
+    }
   }
   &__title{
     text-transform: uppercase;
@@ -21,8 +48,6 @@
     }
   }
   &__desc{
-    @include respond(tab){
-      padding: 2rem;
-    }
+    
   }
 }

@@ -17,7 +17,10 @@
     @include respond(tab){
     padding: 1rem 0;
     height: 15.7rem;
-  }
+    }
+    @include respond (lap){
+      height: 17.7rem;
+    }
     &-underlay{
       border-radius: 8px;
       position: absolute;
@@ -45,7 +48,8 @@
       align-self: center;
       font-weight: $fontWeightBold;
       font-weight: bold;
-      letter-spacing: .107rem
+      letter-spacing: .107rem;
+      align-self: flex-end;
     }
     &-btn{
       @include flex-cen-cen;
