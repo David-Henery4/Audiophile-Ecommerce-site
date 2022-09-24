@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import headerImage from "../../assets/home/mobile/image-header.jpg"
 import headerImgTab from "../../assets/home/tablet/image-header.jpg";
 import {headerHeroDesk} from "../../assets/home/desktop"
@@ -24,7 +25,9 @@ const Header = () => {
         Experience natural, lifelike audio and exceptional build quality made
         for the passionate music enthusiast.
       </p>
-      <button className="header__btn btn-basic-1">SEE PRODUCT</button>
+      <Link className="header__btn" to="/product">
+        <button className="btn-basic-1">SEE PRODUCT</button>
+      </Link>
     </header>
   );
 };

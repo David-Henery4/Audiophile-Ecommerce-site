@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { ArrowRight } from "../../assets/svgsComps";
 import headPhones from "../../assets/shared/desktop/image-category-thumbnail-headphones.png";
 import earPhones from "../../assets/shared/desktop/image-category-thumbnail-earphones.png";
 import speakers from "../../assets/shared/desktop/image-category-thumbnail-speakers.png";
 
-const CategoryList = () => {
+const CategoryList = ({ isProductPage = false }) => {
   return (
-    <div className="categories">
+    <div className="categories" style={{ gridRow: isProductPage && "6/7" }}>
       <div className="categories-box">
         <div className="categories-box-underlay"></div>
         <img
@@ -15,10 +16,10 @@ const CategoryList = () => {
           alt="headphones"
         />
         <p className="categories-box__name">HEADPHONES</p>
-        <div className="categories-box-btn">
+        <Link className="categories-box-btn" to="/category">
           <p className="categories-box-btn__text">SHOP</p>
           <ArrowRight className="categories-box-btn__icon" />
-        </div>
+        </Link>
       </div>
       <div className="categories-box">
         <div className="categories-box-underlay"></div>

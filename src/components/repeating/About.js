@@ -3,9 +3,9 @@ import AboutImgMob from "../../assets/shared/mobile/image-best-gear.jpg";
 import AboutImgTab from "../../assets/shared/tablet/image-best-gear.jpg";
 import AboutImgDesk from "../../assets/shared/desktop/image-best-gear.jpg";
 
-const About = () => {
+const About = ({ isProductPage = false }) => {
   return (
-    <section className="about">
+    <section className="about" style={{gridRow: isProductPage && "7/8"}}>
       <picture className="about__picture">
         <source srcSet={AboutImgDesk} media="(min-width:59.37em)" />
         <source srcSet={AboutImgTab} media="(min-width:43.75em)" />

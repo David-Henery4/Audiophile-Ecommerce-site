@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import linkListData from "../link-list-data/linkListData";
 import {Logo, Facebook, Instagram, Twitter} from "../assets/svgsComps";
 
 // "p" will be <Link> (temp)
 
 const Footer = () => {
+  const [isProductPage, setIsProductPage] = useState(false)
+  const location = useLocation()
+  useEffect(() => {
+    if (location.pathname === "/product")setIsProductPage(true);
+    if (location.pathname !== "/product")setIsProductPage(false);
+  }, [location.pathname])
   return (
-    <footer className="footer">
+    <footer className="footer" style={{gridRow: isProductPage && "8/9"}}>
       <div className="footer__line"></div>
       <Logo className="footer__logo" />
       <ul className="footer-links sub-title-style">

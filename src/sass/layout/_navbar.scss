@@ -1,33 +1,40 @@
 .navbar {
   width: 100%;
   height: 15vh;
-  // background-color: $black;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid $white;
-  &-burger{
-    @include respond (lap){
+  background-color: $black; // could be temp
+  display: grid;
+  grid-template-columns: 1fr repeat(8, 11%) 1fr;
+  @include respond (lrgDesk){
+    grid-template-columns: 1fr repeat(8, 138.75px) 1fr;
+  }
+  &-content{
+    grid-column: 2/10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $white;
+    height: 100%;
+  }
+  &-burger {
+    @include respond(lap) {
       display: none;
     }
   }
-  &-links{
+  &-links {
     display: none;
     list-style-type: none;
     gap: 1.6rem;
     color: $white;
     // justify-content: flex-start;
-    @include respond (lap){
+    @include respond(lap) {
       @include flex-cen-cen-col;
       flex-direction: row;
     }
-    &__link{
+    &__link {
     }
   }
-  &-logo{
-    
+  &-logo {
   }
-  &-cart{
-
+  &-cart {
   }
 }
