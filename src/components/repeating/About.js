@@ -5,7 +5,7 @@ import AboutImgDesk from "../../assets/shared/desktop/image-best-gear.jpg";
 
 const About = ({ isProductPage = false }) => {
   return (
-    <section className="about" style={{gridRow: isProductPage && "7/8"}}>
+    <section className="about" style={{gridRow: isProductPage && "8/9"}}>
       <picture className="about__picture">
         <source srcSet={AboutImgDesk} media="(min-width:59.37em)" />
         <source srcSet={AboutImgTab} media="(min-width:43.75em)" />

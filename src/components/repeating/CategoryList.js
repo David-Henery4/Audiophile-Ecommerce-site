@@ -7,7 +7,7 @@ import speakers from "../../assets/shared/desktop/image-category-thumbnail-speak
 
 const CategoryList = ({ isProductPage = false }) => {
   return (
-    <div className="categories" style={{ gridRow: isProductPage && "6/7" }}>
+    <div className="categories" style={{ gridRow: isProductPage && "7/8" }}>
       <div className="categories-box">
         <div className="categories-box-underlay"></div>
         <img

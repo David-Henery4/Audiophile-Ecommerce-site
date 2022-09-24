@@ -1,9 +1,44 @@
 import React from 'react'
+import {galleryImgOneMob, galleryImgThreeMob, galleryImgTwoMob} from "../../assets/product-xx99-mark-two-headphones/mobile";
+import {galleryImgOneTab, galleryImgTwoTab,galleryImgThreeTab} from "../../assets/product-xx99-mark-two-headphones/tablet";
+import {galleryImgOneDesk, galleryImgTwoDesk, galleryImgThreeDesk} from "../../assets/product-xx99-mark-two-headphones/desktop";
 
 const ProductGallery = () => {
   return (
-    <div className='product-gallery'>ProductGallery</div>
-  )
+    <div className="product-gallery">
+      <div className="product-gallery-sml-imgs">
+        <picture>
+          <source srcSet={galleryImgOneDesk} media="(min-width: 59.37em)" />
+          <source srcSet={galleryImgOneTab} media="(min-width: 43.75em)" />
+          <img
+            className="product-gallery-sml-imgs__image"
+            src={galleryImgOneMob}
+            alt="gallery-sml-img-1"
+          />
+        </picture>
+        <picture>
+          <source srcSet={galleryImgTwoDesk} media="(min-width: 59.37em)" />
+          <source srcSet={galleryImgTwoTab} media="(min-width: 43.75em)" />
+          <img
+            className="product-gallery-sml-imgs__image"
+            srcSet={galleryImgTwoMob}
+            alt="gallery-sml-img-2"
+          />
+        </picture>
+      </div>
+      <div className="product-gallery-lrg-img">
+        <picture>
+          <source srcSet={galleryImgThreeDesk} media="(min-width: 59.37em)" />
+          <source srcSet={galleryImgThreeTab} media="(min-width: 43.75em)" />
+        <img
+          className="product-gallery-lrg-img__image"
+          srcSet={galleryImgThreeMob}
+          alt="gallery-lrg-img"
+        />
+        </picture>
+      </div>
+    </div>
+  );
 }
 
 export default ProductGallery

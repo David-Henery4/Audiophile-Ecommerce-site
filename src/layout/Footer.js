@@ -13,7 +13,7 @@ const Footer = () => {
     if (location.pathname !== "/product")setIsProductPage(false);
   }, [location.pathname])
   return (
-    <footer className="footer" style={{gridRow: isProductPage && "8/9"}}>
+    <footer className="footer" style={{gridRow: isProductPage && "9/10"}}>
       <div className="footer__line"></div>
       <Logo className="footer__logo" />
       <ul className="footer-links sub-title-style">

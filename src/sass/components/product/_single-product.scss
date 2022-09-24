@@ -1,4 +1,48 @@
-.single-product {
-  grid-column: 2/10;
-  grid-row: 2/3;
+.single-product{
+  width: 100%;
+  @include flex-cen-cen-col;
+  gap: 20px;
+  &-img-wrap{
+    width: 100%;
+  }
+  &__image{
+    width: 100%;
+    border-radius: 8px;
+  }
+  &-content{
+    @include flex-cen-cen-col;
+    align-items: flex-start;
+    gap: 26px;
+  }
+  &__title{
+    font-size: 28px;
+    letter-spacing: 1px;
+  }
+  &__price{
+    font-size: 18px;
+    letter-spacing: 1.29px;
+    font-weight: $fontWeightBold;
+  }
+  &__btn-quantity-wrap{
+    @include flex-cen-cen-col;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 296px;
+  }
+  &__quantity{
+    @include flex-cen-cen-col;
+    flex-direction: row;
+    width: 120px;
+    height: 48px;
+    background-color: $lightGrey;
+    &--minus{
+
+    }
+    &--amount{
+      
+    }
+    &--plus{
+
+    }
+  }
 }

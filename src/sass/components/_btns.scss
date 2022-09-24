@@ -22,3 +22,12 @@
   background-color: $black;
   color: $white;
 }
+
+.btn-back-basic{
+  background-color: transparent;
+  border: none;
+  font-size: 15px;
+  font-weight: $fontWeightMedium;
+  line-height: 25px;
+  font-family: $fontFamily;
+}

@@ -1,4 +1,50 @@
-.feats-add-ons{
-  grid-column: 2/10;
-  grid-row: 3/4;
+.feats-add-ons {
+  @include flex-cen-cen-col;
+  align-items: flex-start;
+  padding: 8.8rem 0;
+  gap: 8.8rem;
+}
+
+.features {
+  width: 100%;
+  @include flex-cen-cen-col;
+  align-items: flex-start;
+  gap: 2.4rem;
+  &__title {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: $fontWeightBold;
+    letter-spacing: .86px;
+  }
+  &-desc {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.8rem;
+    &__para {
+    }
+  }
+}
+
+.add-ons {
+  width: 100%;
+  @include flex-cen-cen-col;
+  gap: 2.4rem;
+  align-items: flex-start;
+  &__title {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: $fontWeightBold;
+    letter-spacing: .86px;
+  }
+  &-list {
+    list-style-type: none;
+    &__item {
+      span{
+        color: $colourPrimary;
+        margin-right: 24px;
+      }
+    }
+  }
 }
