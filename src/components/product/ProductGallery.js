@@ -6,35 +6,38 @@ import {galleryImgOneDesk, galleryImgTwoDesk, galleryImgThreeDesk} from "../../a
 const ProductGallery = () => {
   return (
     <div className="product-gallery">
-      <div className="product-gallery-sml-imgs">
+      <div className="product-gallery-sml-img-1">
         <picture>
           <source srcSet={galleryImgOneDesk} media="(min-width: 59.37em)" />
           <source srcSet={galleryImgOneTab} media="(min-width: 43.75em)" />
           <img
-            className="product-gallery-sml-imgs__image"
+            className="product-gallery-sml-img"
             src={galleryImgOneMob}
             alt="gallery-sml-img-1"
           />
         </picture>
+      </div>
+
+      <div className="product-gallery-sml-img-2">
         <picture>
-          <source srcSet={galleryImgTwoDesk} media="(min-width: 59.37em)" />
-          <source srcSet={galleryImgTwoTab} media="(min-width: 43.75em)" />
-          <img
-            className="product-gallery-sml-imgs__image"
-            srcSet={galleryImgTwoMob}
-            alt="gallery-sml-img-2"
+        <source srcSet={galleryImgTwoDesk} media="(min-width: 59.37em)" />
+        <source srcSet={galleryImgTwoTab} media="(min-width: 43.75em)" />
+        <img
+          className="product-gallery-sml-img"
+          srcSet={galleryImgTwoMob}
+          alt="gallery-sml-img-2"
           />
-        </picture>
+          </picture>
       </div>
       <div className="product-gallery-lrg-img">
         <picture>
           <source srcSet={galleryImgThreeDesk} media="(min-width: 59.37em)" />
           <source srcSet={galleryImgThreeTab} media="(min-width: 43.75em)" />
-        <img
-          className="product-gallery-lrg-img__image"
-          srcSet={galleryImgThreeMob}
-          alt="gallery-lrg-img"
-        />
+          <img
+            className="product-gallery-lrg-img__image"
+            srcSet={galleryImgThreeMob}
+            alt="gallery-lrg-img"
+          />
         </picture>
       </div>
     </div>

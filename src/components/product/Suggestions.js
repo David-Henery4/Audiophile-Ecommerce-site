@@ -10,40 +10,46 @@ const Suggestions = () => {
       <h3 className="suggestions__section-heading">YOU MAY ALSO LIKE</h3>
       <div className="suggestions-products">
         <div className="suggestions-item">
-          <picture>
-            <source srcSet={xx99MK1DeskSuggestion} media="(59.37em)" />
-            <source srcSet={xx99MK1TabSuggestion} media="(43.75em)" />
-          <img
-            className="suggestions-item__image"
-            srcSet={xx99MK1MobSuggestion}
-            alt="suggested-item-1"
-          />
+          <picture className="suggestions-picture">
+            <source
+              srcSet={xx99MK1DeskSuggestion}
+              media="(min-width: 59.37em)"
+            />
+            <source
+              srcSet={xx99MK1TabSuggestion}
+              media="(min-width: 43.75em)"
+            />
+            <img
+              className="suggestions-item__image"
+              srcSet={xx99MK1MobSuggestion}
+              alt="suggested-item-1"
+            />
           </picture>
           <h5 className="suggestions-item__title">XX99 MARK I</h5>
           <button className="btn-basic-1">SEE PRODUCT</button>
         </div>
         <div className="suggestions-item">
-          <picture>
-            <source srcSet={xx59DeskSuggestion} media="(59.37em)" />
-            <source srcSet={xx59TabSuggestion} media="(43.75em)" />
-          <img
-            className="suggestions-item__image"
-            srcSet={xx59MobSuggestion}
-            alt="suggested-item-2"
-          />
+          <picture className="suggestions-picture">
+            <source srcSet={xx59DeskSuggestion} media="(min-width: 59.37em)" />
+            <source srcSet={xx59TabSuggestion} media="(min-width: 43.75em)" />
+            <img
+              className="suggestions-item__image"
+              srcSet={xx59MobSuggestion}
+              alt="suggested-item-2"
+            />
           </picture>
           <h5 className="suggestions-item__title">XX59</h5>
           <button className="btn-basic-1">SEE PRODUCT</button>
         </div>
         <div className="suggestions-item">
-          <picture>
-            <source srcSet={xz9DeskSuggestion} media="(59.37em)" />
-            <source srcSet={xz9TabSuggestion} media="(43.75em)" />
-          <img
-            className="suggestions-item__image"
-            srcSet={zx9MobSuggestion}
-            alt="suggested-item-3"
-          />
+          <picture className="suggestions-picture">
+            <source srcSet={xz9DeskSuggestion} media="(min-width: 59.37em)" />
+            <source srcSet={xz9TabSuggestion} media="(min-width: 43.75em)" />
+            <img
+              className="suggestions-item__image"
+              srcSet={zx9MobSuggestion}
+              alt="suggested-item-3"
+            />
           </picture>
           <h5 className="suggestions-item__title">ZX9 SPEAKER</h5>
           <button className="btn-basic-1">SEE PRODUCT</button>
