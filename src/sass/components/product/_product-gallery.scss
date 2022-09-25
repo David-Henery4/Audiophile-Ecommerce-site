@@ -1,21 +1,36 @@
-.product-gallery{
+.product-gallery {
   width: 100%;
   @include flex-cen-cen-col;
   gap: 20px;
-  &-sml-imgs{
+  @include respond(tab) {
+    flex-direction: row;
+  }
+  &-sml-imgs {
     width: 100%;
     @include flex-cen-cen-col;
     gap: 20px;
-    &__image{
+    @include respond(tab) {
+      height: 100%;
+    }
+    &__image {
       width: 100%;
       border-radius: 8px;
-    } 
+      @include respond(tab) {
+        height: 100%;
+      }
+    }
   }
-  &-lrg-img{
+  &-lrg-img {
     width: 100%;
-    &__image{
+    @include respond(tab) {
+      height: 100%;
+    }
+    &__image {
       width: 100%;
       border-radius: 8px;
+      @include respond(tab) {
+        height: 100%;
+      }
     }
   }
 }
