@@ -10,6 +10,7 @@
 @import "./sass/layout/main-layout";
 @import "./sass/layout/category-product/cat-prod-layout";
 @import "./sass/layout/product/product-page-layout";
+@import "./sass/layout/checkout/checkout-layout";
 @import "./sass/layout/navbar";
 @import "./sass/layout/footer";
 @import "./sass/components/btns";
@@ -25,4 +26,11 @@
 @import "./sass/components/product/product-gallery";
 @import "./sass/components/product/suggestions";
 @import "./sass/components/product/back-btn";
+@import "./sass/components/checkout/input-styles";
+@import "./sass/components/checkout/checkout";
+@import "./sass/components/checkout/billing-details";
+@import "./sass/components/checkout/shipping-info";
+@import "./sass/components/checkout/payment-details";
+@import "./sass/components/checkout/summary";
+
 

@@ -1,0 +1,22 @@
+.checkout{
+  width: 100%;
+  @include flex-cen-cen-col;
+  &-form{
+    @include flex-cen-cen-col;
+    gap: 32px;
+    width: 100%;
+    padding: 24px;    
+    background-color: $white;
+    border-radius: 8px;
+    border: 1px solid black; // temp
+    &__heading{
+      width: 100%;
+      font-size: 28px;
+      font-weight: $fontWeightBold;
+      margin-bottom: 42px;
+      @include respond (tab){
+        @include h3-style;
+      }
+    }
+  }
+}

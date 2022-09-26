@@ -1,0 +1,28 @@
+.billing {
+  // COMBINE THIS WITH SHIPPING BECAUSE IDENTICAL
+  width: 100%;
+  padding: 32px 0;
+  &-fields {
+    width: 100%;
+    border: none;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+    gap: 50px;
+    // @include flex-cen-cen-col;
+    // SECTION TITLE
+    &__title {
+      position: absolute;
+      top: -55px;
+      left: 0;
+    }
+
+    // WRAPS
+    &__name {
+    }
+    &__email {
+    }
+    &__phone-num {
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.shipping{
+  width: 100%;
+  padding: 32px 0;
+  &-fields{
+    width: 100%;
+    border: none;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+    gap: 50px;
+    &__title{
+      position: absolute;
+      top: -55px;
+      left: 0;
+    }
+    &__address{
+      grid-column: 1/-1;
+      grid-row: 1/2;
+    }
+    &__zip{
+      
+    }
+    &__city{
+      
+    }
+    &__country{
+      
+    }
+  }
+}

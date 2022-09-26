@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Burger, Logo, Cart } from "../assets/svgsComps";
 import linkListData from "../link-list-data/linkListData";
 
@@ -24,7 +25,10 @@ const Navbar = () => {
           })}
         </ul>
         <div className="navbar-cart">
-          <Cart />
+          {/* TEMP CHECKOUT LINK WILL BE ON CART MENU NOT ICON */}
+          <Link to="/checkout">
+            <Cart />
+          </Link>
         </div>
       </div>
     </nav>
