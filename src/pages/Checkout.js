@@ -10,7 +10,7 @@ import {
 const Checkout = () => {
   return (
     <>
-      <BackBtn />
+        <BackBtn />
       <main className="checkout">
         <form name="checkout-form" id="checkout-form" className="checkout-form">
           <h3 className="checkout-form__heading">CHECKOUT</h3>

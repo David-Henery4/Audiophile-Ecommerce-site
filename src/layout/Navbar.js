@@ -24,12 +24,12 @@ const Navbar = () => {
             );
           })}
         </ul>
-        <div className="navbar-cart">
           {/* TEMP CHECKOUT LINK WILL BE ON CART MENU NOT ICON */}
           <Link to="/checkout">
+        <div className="navbar-cart">
             <Cart />
-          </Link>
         </div>
+          </Link>
       </div>
     </nav>
   );

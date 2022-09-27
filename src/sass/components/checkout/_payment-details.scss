@@ -1,0 +1,72 @@
+.payment {
+  width: 100%;
+  &-fields {
+    width: 100%;
+    border: none;
+    // gap: 57px;
+    // RADIOS
+    &__title {
+      margin-bottom: 49px;
+    }
+    &-radio-wrap {
+      width: 100%;
+      @include flex-cen-cen-col;
+      align-items: flex-start;
+      gap: 16px;
+      @include respond(tab) {
+        justify-content: space-between;
+        flex-direction: row;
+      }
+    }
+    &__heading {
+      font-size: 12px;
+      font-weight: $fontWeightBold;
+    }
+    &-radio-options {
+      width: 100%;
+      @include flex-cen-cen-col;
+      gap: 16px;
+      @include respond(tab) {
+        width: 48.8%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 16px;
+      }
+    }
+    &-radio {
+      height: 56px;
+      width: 100%; // for now
+      border-radius: 8px;
+      border: 1px solid grey; // colour temp
+      padding: 21px;
+      @include flex-cen-cen-col;
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 21px;
+      &__label {
+        font-size: 14px;
+        font-weight: $fontWeightBold;
+      }
+      &__input {
+      }
+    }
+  }
+  // NUMBERS INPUT
+  &-numbers-wrap {
+    @include flex-cen-cen-col;
+    margin-top: 54px;
+    gap: 24px;
+    @include respond(tab) {
+      flex-direction: row;
+    }
+  }
+  &-number {
+    width: 100%;
+    &__label {
+    }
+    &__input {
+    }
+  }
+}
