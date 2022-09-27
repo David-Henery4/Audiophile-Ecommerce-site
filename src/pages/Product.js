@@ -4,7 +4,7 @@ import {FeaturesAndAddOns, ProductGallery, SingleProduct, Suggestions, BackBtn} 
 
 const Product = () => {
   const [isProductPage, setIsProductPage] = useState(true);
-
+  
   return (
     <>
       <BackBtn/>

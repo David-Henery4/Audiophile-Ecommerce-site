@@ -1,10 +1,22 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import {getActiveHeaderProduct} from "../../features/store/storeSlice";
 import headerImage from "../../assets/home/mobile/image-header.jpg"
 import headerImgTab from "../../assets/home/tablet/image-header.jpg";
 import {headerHeroDesk} from "../../assets/home/desktop"
 
 const Header = () => {
+  const [headerProductId,setHeaderProductId] = useState(0)
+  const {mainStoreData} = useSelector((store) => store.store)
+  
+  useEffect(() => {
+    const prod = mainStoreData.find((prod) => {
+      return prod.name === "XX99 Mark II Headphones"
+    })
+    setHeaderProductId(prod.id)
+  }, [mainStoreData])
   return (
     <header className="header">
       <picture className="header__picture">
@@ -25,7 +37,7 @@ const Header = () => {
         Experience natural, lifelike audio and exceptional build quality made
         for the passionate music enthusiast.
       </p>
-      <Link className="header__btn" to="/product">
+      <Link className="header__btn" to={`/product/${headerProductId}`}>
         <button className="btn-basic-1">SEE PRODUCT</button>
       </Link>
     </header>

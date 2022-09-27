@@ -9,8 +9,8 @@ const Footer = () => {
   const [isProductPage, setIsProductPage] = useState(false)
   const location = useLocation()
   useEffect(() => {
-    if (location.pathname === "/product")setIsProductPage(true);
-    if (location.pathname !== "/product")setIsProductPage(false);
+    if (location.pathname.includes("/product")) setIsProductPage(true);
+    if (!location.pathname.includes("/product")) setIsProductPage(false);
   }, [location.pathname])
   return (
     <footer className="footer" style={{gridRow: isProductPage && "9/10"}}>
