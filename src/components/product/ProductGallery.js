@@ -2,8 +2,21 @@ import React from 'react'
 import {galleryImgOneMob, galleryImgThreeMob, galleryImgTwoMob} from "../../assets/product-xx99-mark-two-headphones/mobile";
 import {galleryImgOneTab, galleryImgTwoTab,galleryImgThreeTab} from "../../assets/product-xx99-mark-two-headphones/tablet";
 import {galleryImgOneDesk, galleryImgTwoDesk, galleryImgThreeDesk} from "../../assets/product-xx99-mark-two-headphones/desktop";
+import { useEffect, useState } from 'react';
 
-const ProductGallery = () => {
+const ProductGallery = ({gallery}) => {
+  const [firstImg, setFirstImg] = useState(null)
+  const [secondImg, setSecondImg] = useState(null)
+  const [thirdImg, setThirdImg] = useState(null)
+  
+  useEffect(() => {
+  if (gallery) {
+    const { first, second, third } = gallery;
+    setFirstImg(first)
+    setSecondImg(second)
+    setThirdImg(third)
+  }
+  }, [gallery])
   return (
     <div className="product-gallery">
       <div className="product-gallery-sml-img-1">
