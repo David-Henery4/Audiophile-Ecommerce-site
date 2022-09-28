@@ -6,6 +6,7 @@ import earPhones from "../../assets/shared/desktop/image-category-thumbnail-earp
 import speakers from "../../assets/shared/desktop/image-category-thumbnail-speakers.png";
 
 const CategoryList = ({ isProductPage = false }) => {
+
   return (
     <div className="categories" style={{ gridRow: isProductPage && "7/8" }}>
       <div className="categories-box">
@@ -16,7 +17,7 @@ const CategoryList = ({ isProductPage = false }) => {
           alt="headphones"
         />
         <p className="categories-box__name">HEADPHONES</p>
-        <Link className="categories-box-btn" to="/category">
+        <Link className="categories-box-btn" to={`/category/${"headphones"}`}>
           <p className="categories-box-btn__text">SHOP</p>
           <ArrowRight className="categories-box-btn__icon" />
         </Link>
@@ -25,10 +26,10 @@ const CategoryList = ({ isProductPage = false }) => {
         <div className="categories-box-underlay"></div>
         <img className="categories-box__image" src={speakers} alt="speakers" />
         <p className="categories-box__name">SPEAKERS</p>
-        <div className="categories-box-btn">
+        <Link className="categories-box-btn" to={`/category/${"speakers"}`}>
           <p className="categories-box-btn__text">SHOP</p>
           <ArrowRight className="categories-box-btn__icon" />
-        </div>
+        </Link>
       </div>
       <div className="categories-box">
         <div className="categories-box-underlay"></div>
@@ -38,10 +39,13 @@ const CategoryList = ({ isProductPage = false }) => {
           alt="earphones"
         />
         <p className="categories-box__name">EARPHONES</p>
-        <div className="categories-box-btn">
+        <Link
+          className="categories-box-btn"
+          to={`/category/${"earphones"}`}
+        >
           <p className="categories-box-btn__text">SHOP</p>
           <ArrowRight className="categories-box-btn__icon" />
-        </div>
+        </Link>
       </div>
     </div>
   );
