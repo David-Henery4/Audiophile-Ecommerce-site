@@ -10,12 +10,13 @@ const storeSlice = createSlice({
   name: "store",
   initialState,
   reducers: {
-    getActiveHeaderProduct: (state, { payload }) => {
-      console.log(payload);
+    setActiveHeaderProduct: (state, { payload }) => {
+      const active = state.mainStoreData.find((item) => item.id === +payload)
+      state.activeHeaderProduct = active;
     },
   },
 });
 
 export default storeSlice.reducer
 
-export const {getActiveHeaderProduct} = storeSlice.actions
+export const {setActiveHeaderProduct} = storeSlice.actions

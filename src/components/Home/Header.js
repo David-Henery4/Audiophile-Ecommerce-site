@@ -1,8 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import {getActiveHeaderProduct} from "../../features/store/storeSlice";
+import {useSelector } from "react-redux";
 import headerImage from "../../assets/home/mobile/image-header.jpg"
 import headerImgTab from "../../assets/home/tablet/image-header.jpg";
 import {headerHeroDesk} from "../../assets/home/desktop"
