@@ -8,6 +8,9 @@
   font-weight: $fontWeightBold;
   border: none;
   font-family: $fontFamily;
+  &:hover{
+    cursor: pointer;
+  }
 }
 
 .btn-basic-1{

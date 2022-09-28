@@ -21,11 +21,17 @@ const ProductGallery = ({gallery}) => {
     <div className="product-gallery">
       <div className="product-gallery-sml-img-1">
         <picture>
-          <source srcSet={galleryImgOneDesk} media="(min-width: 59.37em)" />
-          <source srcSet={galleryImgOneTab} media="(min-width: 43.75em)" />
+          <source
+            srcSet={firstImg && require(`../../assets/${firstImg.desktop}`)}
+            media="(min-width: 59.37em)"
+          />
+          <source
+            srcSet={firstImg && require(`../../assets/${firstImg.tablet}`)}
+            media="(min-width: 43.75em)"
+          />
           <img
             className="product-gallery-sml-img"
-            src={galleryImgOneMob}
+            src={firstImg && require(`../../assets/${firstImg.mobile}`)}
             alt="gallery-sml-img-1"
           />
         </picture>
@@ -33,22 +39,31 @@ const ProductGallery = ({gallery}) => {
 
       <div className="product-gallery-sml-img-2">
         <picture>
-        <source srcSet={galleryImgTwoDesk} media="(min-width: 59.37em)" />
-        <source srcSet={galleryImgTwoTab} media="(min-width: 43.75em)" />
-        <img
-          className="product-gallery-sml-img"
-          srcSet={galleryImgTwoMob}
-          alt="gallery-sml-img-2"
+          <source
+            srcSet={secondImg && require(`../../assets/${secondImg.desktop}`)}
+            media="(min-width: 59.37em)"
           />
-          </picture>
+          <source
+            srcSet={secondImg && require(`../../assets/${secondImg.tablet}`)}
+            media="(min-width: 43.75em)"
+          />
+          <img
+            className="product-gallery-sml-img"
+            srcSet={secondImg && require(`../../assets/${secondImg.mobile}`)}
+            alt="gallery-sml-img-2"
+          />
+        </picture>
       </div>
       <div className="product-gallery-lrg-img">
         <picture>
-          <source srcSet={galleryImgThreeDesk} media="(min-width: 59.37em)" />
-          <source srcSet={galleryImgThreeTab} media="(min-width: 43.75em)" />
+          <source
+            srcSet={thirdImg && require(`../../assets/${thirdImg.desktop}`)}
+            media="(min-width: 59.37em)"
+          />
+          <source srcSet={thirdImg && require(`../../assets/${thirdImg.tablet}`)} media="(min-width: 43.75em)" />
           <img
             className="product-gallery-lrg-img__image"
-            srcSet={galleryImgThreeMob}
+            srcSet={thirdImg && require(`../../assets/${thirdImg.mobile}`)}
             alt="gallery-lrg-img"
           />
         </picture>

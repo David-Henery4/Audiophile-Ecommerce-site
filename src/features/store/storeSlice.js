@@ -3,20 +3,20 @@ import initialStoreData from "../../JSON-Data/data.json";
 
 const initialState = {
   mainStoreData: initialStoreData,
-  activeHeaderProduct: {},
+  activeProduct: {},
 }
 
 const storeSlice = createSlice({
   name: "store",
   initialState,
   reducers: {
-    setActiveHeaderProduct: (state, { payload }) => {
-      const active = state.mainStoreData.find((item) => item.id === +payload)
-      state.activeHeaderProduct = active;
+    setActiveProduct: (state, { payload }) => {
+      const active = state.mainStoreData.find((item) => item.slug === payload)
+      state.activeProduct = active;
     },
   },
 });
 
 export default storeSlice.reducer
 
-export const {setActiveHeaderProduct} = storeSlice.actions
+export const {setActiveProduct} = storeSlice.actions

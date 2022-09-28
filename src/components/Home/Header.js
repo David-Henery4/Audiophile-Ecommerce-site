@@ -7,14 +7,14 @@ import headerImgTab from "../../assets/home/tablet/image-header.jpg";
 import {headerHeroDesk} from "../../assets/home/desktop"
 
 const Header = () => {
-  const [headerProductId,setHeaderProductId] = useState(0)
+  const [headerProductSlug,setHeaderProductSlug] = useState("")
   const {mainStoreData} = useSelector((store) => store.store)
   
   useEffect(() => {
     const prod = mainStoreData.find((prod) => {
       return prod.name === "XX99 Mark II Headphones"
     })
-    setHeaderProductId(prod.id)
+    setHeaderProductSlug(prod.slug)
   }, [mainStoreData])
   return (
     <header className="header">
@@ -36,7 +36,7 @@ const Header = () => {
         Experience natural, lifelike audio and exceptional build quality made
         for the passionate music enthusiast.
       </p>
-      <Link className="header__btn" to={`/product/${headerProductId}`}>
+      <Link className="header__btn" to={`/product/${headerProductSlug}`}>
         <button className="btn-basic-1">SEE PRODUCT</button>
       </Link>
     </header>
