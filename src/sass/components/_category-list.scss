@@ -51,11 +51,15 @@
       letter-spacing: .107rem;
       align-self: flex-end;
     }
-    &-btn{
+    &-btn,
+    &-btn:link,
+    &-btn:visited{
       @include flex-cen-cen;
       gap: 1rem;
       grid-column: 4/6;
       grid-row: 3/4;
+      text-decoration: none;
+      color: $black;
       &__text{
         font-size: 13px;
         letter-spacing: .1rem;

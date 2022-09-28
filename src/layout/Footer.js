@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import linkListData from "../link-list-data/linkListData";
 import {Logo, Facebook, Instagram, Twitter} from "../assets/svgsComps";
+import { Link } from "react-router-dom";
 
 // "p" will be <Link> (temp)
 
@@ -19,8 +20,10 @@ const Footer = () => {
       <ul className="footer-links sub-title-style">
         {linkListData.map((li) => {
           return (
-            <li key={li.id} className="footer-links__link">
-              <p>{li.linkTo}</p>
+            <li key={li.id}>
+              <Link to={li.path} className="footer-links__link">
+                <p>{li.linkTo}</p>
+              </Link>
             </li>
           );
         })}

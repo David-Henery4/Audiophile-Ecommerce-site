@@ -19,7 +19,7 @@ function App() {
       <Wrapper>
         <Navbar />
         <Routes>
-          <Route path="*" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="category/:categoryName" element={<Category />} />
           <Route path="product/:productSlug" element={<Product />} />
           <Route path="checkout" element={<Checkout/>}/>

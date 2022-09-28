@@ -1,19 +1,23 @@
 const linkListData = [
   {
     id: 1,
-    linkTo: "HOME"
+    linkTo: "HOME",
+    path: "/",
   },
   {
     id: 2,
-    linkTo: "HEADPHONES"
+    linkTo: "HEADPHONES",
+    path: "/category/headphones",
   },
   {
     id: 3,
-    linkTo: "SPEAKERS"
+    linkTo: "SPEAKERS",
+    path: "/category/speakers",
   },
   {
     id: 4,
-    linkTo: "EARPHONES"
+    linkTo: "EARPHONES",
+    path: "/category/earphones",
   },
 ];
 

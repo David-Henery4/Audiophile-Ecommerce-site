@@ -33,4 +33,7 @@
   font-weight: $fontWeightMedium;
   line-height: 25px;
   font-family: $fontFamily;
+  &:hover{
+    cursor: pointer;
+  }
 }

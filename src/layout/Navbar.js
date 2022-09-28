@@ -13,13 +13,17 @@ const Navbar = () => {
           <Burger />
         </div>
         <div className="navbar-logo">
-          <Logo />
+          <Link to="/">
+            <Logo/>
+          </Link>
         </div>
         <ul className="navbar-links sub-title-style">
           {linkListData.map((li) => {
             return (
-              <li className="navbar-links__link" key={li.id}>
-                <p>{li.linkTo}</p>
+              <li key={li.id}>
+                <Link to={li.path} className="navbar-links__link">
+                  <p>{li.linkTo}</p>
+                </Link>
               </li>
             );
           })}

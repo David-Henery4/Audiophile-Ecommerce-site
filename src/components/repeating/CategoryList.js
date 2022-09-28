@@ -17,7 +17,7 @@ const CategoryList = ({ isProductPage = false }) => {
           alt="headphones"
         />
         <p className="categories-box__name">HEADPHONES</p>
-        <Link className="categories-box-btn" to={`/category/${"headphones"}`}>
+        <Link className="categories-box-btn" to="/category/headphones">
           <p className="categories-box-btn__text">SHOP</p>
           <ArrowRight className="categories-box-btn__icon" />
         </Link>
@@ -26,7 +26,7 @@ const CategoryList = ({ isProductPage = false }) => {
         <div className="categories-box-underlay"></div>
         <img className="categories-box__image" src={speakers} alt="speakers" />
         <p className="categories-box__name">SPEAKERS</p>
-        <Link className="categories-box-btn" to={`/category/${"speakers"}`}>
+        <Link className="categories-box-btn" to="/category/speakers">
           <p className="categories-box-btn__text">SHOP</p>
           <ArrowRight className="categories-box-btn__icon" />
         </Link>
@@ -41,7 +41,7 @@ const CategoryList = ({ isProductPage = false }) => {
         <p className="categories-box__name">EARPHONES</p>
         <Link
           className="categories-box-btn"
-          to={`/category/${"earphones"}`}
+          to="/category/earphones"
         >
           <p className="categories-box-btn__text">SHOP</p>
           <ArrowRight className="categories-box-btn__icon" />

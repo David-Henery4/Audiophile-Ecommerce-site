@@ -54,8 +54,12 @@
       grid-row: 2/3;
       justify-content: flex-end;
     }
-  }
-  &__link {
+    &__link,
+    &__link:link,
+    &__link:visited {
+      color: $white;
+      text-decoration: none;
+    }
   }
   &__desc {
     grid-column: 2/10;

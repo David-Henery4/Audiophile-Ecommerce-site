@@ -48,6 +48,7 @@
     &__text-wrap{
       @include flex-cen-cen-col;
       gap: 2rem;
+      z-index: 5;
       @include respond (lap){
         align-items: flex-start;
         gap: 1.5rem;

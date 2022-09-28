@@ -4,6 +4,7 @@
   background-color: $black; // could be temp
   display: grid;
   grid-template-columns: 1fr repeat(8, 11%) 1fr;
+  z-index: 5;
   @include respond (lrgDesk){
     grid-template-columns: 1fr repeat(8, 138.75px) 1fr;
   }
@@ -30,7 +31,11 @@
       @include flex-cen-cen-col;
       flex-direction: row;
     }
-    &__link {
+    &__link,
+    &__link:link,
+    &__link:visited {
+      color: $white;
+      text-decoration: none;
     }
   }
   &-logo {
