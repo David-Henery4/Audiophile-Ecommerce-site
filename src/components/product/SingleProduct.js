@@ -1,10 +1,31 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
 import {xx99MK2MobProduct} from "../../assets/product-xx99-mark-two-headphones/mobile";
 import {xx99MK2TabProduct} from "../../assets/product-xx99-mark-two-headphones/tablet";
 import {xx99MK2DeskProduct} from "../../assets/product-xx99-mark-two-headphones/desktop";
+import { useState } from "react";
 
 const SingleProduct = ({ id, name, image, price, description }) => {
-  // const {mobile, tablet, desktop} = image
+  const [itemQuantity, setItemQuantity] = useState(1)
+  const dispatch = useDispatch()
+  const { mainStoreData } = useSelector((store) => store.store);
+  //
+  const handleAddItemToCart = (itemId) => {
+    const foundItem = mainStoreData.find((item) => item.id === itemId)
+    // sort nicknames & cart images into the native JSON! 
+    // work out VAT % (20% OF TOTAL PRICE)
+    // (also change "new" key to "newProduct" key in JSON)
+    const {id, price} = foundItem;
+    const itemToAdd = {
+      id,
+      price,
+      itemQuantity,
+      shipping: 50,
+      totalPrice: price * itemQuantity,
+
+    }
+  }
+  //
   return (
     <div className="single-product">
       <div className="single-product-img-wrap">

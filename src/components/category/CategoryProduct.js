@@ -5,8 +5,8 @@ import {xx99MK2TabPreview} from "../../assets/product-xx99-mark-two-headphones/t
 import {xx99MK2DeskPreview} from "../../assets/product-xx99-mark-two-headphones/desktop";
 
 
-const CategoryProduct = ({name, image, slug, description}) => {
-  const {mobile,desktop,tablet} = image
+const CategoryProduct = ({name, categoryImage, slug, description}) => {
+  const {mobile,desktop,tablet} = categoryImage
   return (
     <div className="category-product">
       <div className="category-product-image">
