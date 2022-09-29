@@ -1,0 +1,124 @@
+.confirmation{
+  background-color: $white;
+  border: 1px solid black;
+  position: absolute;
+  z-index: 20;
+  border-radius: 8px;
+  top: 69%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3.2rem;
+  width: 90%; // might change to 87
+  max-width: 540px;
+  @include flex-cen-cen-col;
+  align-items: flex-start;
+  gap: 23px;
+  &__icon{
+    
+  }
+
+  &-header{
+    width: 100%;
+    &__title{
+      font-size: 24px;
+      line-height: 28px;
+      letter-spacing: 0.86px;
+      text-align: left;
+      @include respond (tab){
+        @include h3-style;
+      }
+    }
+    &__text{
+      margin-top: 16px;
+      color: $greyish;
+    }
+  }
+  
+  // TOP HALF OF INFO
+  &-info{
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    @include flex-cen-cen-col;
+    @include respond (tab){
+      flex-direction: row;
+      align-items: stretch;
+    }
+    &-top{
+      padding: 24px;
+      width: 100%;
+      background-color: $lightGrey;
+    }
+  }
+
+  // ITEMS WRAP & SINGLE ITEMS
+  &-items{
+    width: 100%;
+    @extend .summary-items;
+    gap: 16px;
+    padding: 0 0 12px;
+    justify-content: flex-start;
+    // border-bottom: 1px solid $greyish;
+
+    &-item{
+      @extend .summary-single-item;
+      grid-template-columns: none;
+      &__image{
+        @extend .summary-single-item__image;
+        max-width: 50px;
+        height: 50px;
+      }
+      &__name{
+        @extend .summary-single-item__name;
+      }
+      &__price{
+        @extend .summary-single-item__price;
+      }
+      &__quantity{
+        @extend .summary-single-item__quantity;
+      }
+    }
+
+    &-total{
+      width: 100%;
+      border-top: 1px solid $greyish;
+      padding: 12px 0 0;
+      text-align: center;
+      font-size: 12px;
+      font-weight: $fontWeightBold;
+      color: $greyish;
+      &__text{
+        
+      }
+    }
+  }
+
+  // BOTTOM HALF OF INFO
+  &-info-bottom{
+    background-color: $black;
+    padding: 15px 24px 19px;
+    width: 100%;
+    @include flex-cen-cen-col;
+    align-items: flex-start;
+    gap: 8px;
+    @include respond (tab){
+      width: 70%;
+      padding: 5% 19px 10%;
+      justify-content: flex-end;
+    }
+    &__grand-title{
+      color: $greyish;
+    }
+    &__grand-amount{
+      color:  $white;
+      font-size: 18px;
+      font-weight: $fontWeightBold;
+    }
+  }
+
+  // Confirmation BTN 
+  &__btn{
+    width: 100%;
+  }
+}
+

@@ -5,11 +5,13 @@ import {
   PaymentDetails,
   ShippingInfo,
   Summary,
+  OrderConfirmation
 } from "../components/checkout";
 
 const Checkout = () => {
   return (
     <>
+    <OrderConfirmation/>
         <BackBtn />
       <main className="checkout">
         <form name="checkout-form" id="checkout-form" className="checkout-form">
