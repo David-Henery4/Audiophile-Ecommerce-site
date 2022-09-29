@@ -5,6 +5,7 @@ const initialState = {
   mainStoreData: initialStoreData,
   activeProduct: {},
   activeCategories: [],
+  isDropDownNavActive: false,
 }
 
 const storeSlice = createSlice({
@@ -21,10 +22,19 @@ const storeSlice = createSlice({
         return item.category === payload
       })
       state.activeCategories = matchingCategories
+    },
+    toggleDropDownNav: (state, {payload}) => {
+      state.isDropDownNavActive = !state.isDropDownNavActive
+    },
+    openDropDownNav: (state, {payload}) => {
+      state.isDropDownNavActive = true
+    },
+    closeDropDownNav: (state, {payload}) => {
+      state.isDropDownNavActive = false
     }
   },
 });
 
 export default storeSlice.reducer
 
-export const {setActiveProduct, setActiveCategories} = storeSlice.actions
+export const {setActiveProduct, setActiveCategories, toggleDropDownNav, closeDropDownNav, openDropDownNav} = storeSlice.actions

@@ -54,9 +54,11 @@
   }
   &__quantity{
     @include flex-cen-cen-col;
+    justify-content: space-evenly;
     flex-direction: row;
     width: 120px;
     height: 48px;
+    font-size: 13px;
     background-color: $lightGrey;
     &--minus{
 

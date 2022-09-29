@@ -8,11 +8,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 3.2rem;
-  width: 90%; // might change to 87
+  width: 90%;
   max-width: 540px;
   @include flex-cen-cen-col;
   align-items: flex-start;
   gap: 23px;
+  display: none; // temp
   &__icon{
     
   }
@@ -58,7 +59,6 @@
     gap: 16px;
     padding: 0 0 12px;
     justify-content: flex-start;
-    // border-bottom: 1px solid $greyish;
 
     &-item{
       @extend .summary-single-item;
@@ -122,3 +122,6 @@
   }
 }
 
+.confirmation-active{
+  display: flex;
+}

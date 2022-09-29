@@ -28,26 +28,6 @@ const OrderConfirmation = () => {
               <p className="confirmation-items-item__price">$2,999</p>
               <p className="confirmation-items-item__quantity">x1</p>
             </div>
-            {/* <div className="confirmation-items-item">
-              <img
-                className="confirmation-items-item__image"
-                src={xx99MK2}
-                alt="item"
-              />
-              <p className="confirmation-items-item__name">xx99 MK II</p>
-              <p className="confirmation-items-item__price">$2,999</p>
-              <p className="confirmation-items-item__quantity">x1</p>
-            </div> */}
-            {/* <div className="confirmation-items-item">
-              <img
-                className="confirmation-items-item__image"
-                src={xx99MK2}
-                alt="item"
-              />
-              <p className="confirmation-items-item__name">xx99 MK II</p>
-              <p className="confirmation-items-item__price">$2,999</p>
-              <p className="confirmation-items-item__quantity">x1</p>
-            </div> */}
           </div>
           <div className="confirmation-items-total">
             <p className="confirmation-items-total__text">
