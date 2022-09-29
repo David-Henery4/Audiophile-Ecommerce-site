@@ -1,11 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Burger, Logo, Cart } from "../assets/svgsComps";
+import { useDispatch } from "react-redux";
+import {toggleOverlay, toggleCart} from "../features/cart/cartSlice";
+import { Burger, Logo, CartIcon } from "../assets/svgsComps";
+import { Cart } from "../components/cart";
 import linkListData from "../link-list-data/linkListData";
 
 // WILL ADD (UL - LINKS)
 
 const Navbar = () => {
+  const dispatch = useDispatch()
+  
+  const handleToggleCart = () => {
+    dispatch(toggleOverlay())
+    dispatch(toggleCart())
+  }
+  
   return (
     <nav className="navbar">
       <div className="navbar-content">
@@ -29,11 +39,12 @@ const Navbar = () => {
           })}
         </ul>
           {/* TEMP CHECKOUT LINK WILL BE ON CART MENU NOT ICON */}
-          <Link to="/checkout">
-        <div className="navbar-cart">
-            <Cart />
+          {/* <Link to="/checkout">
+          </Link> */}
+        <div className="navbar-cart" onClick={handleToggleCart}>
+            <CartIcon />
         </div>
-          </Link>
+      <Cart/>
       </div>
     </nav>
   );

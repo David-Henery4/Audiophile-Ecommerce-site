@@ -1,7 +1,9 @@
 import { useLayoutEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import {Category, Checkout, Home, Product} from "./pages"; // will add all to router
-import {Navbar, Footer} from "./layout"
+import {Category, Checkout, Home, Product} from "./pages";
+import {Navbar, Footer} from "./layout";
+import {Overlay} from "./components/overlay";
+
 
 const Wrapper = ({children}) => {
   const location = useLocation()
@@ -17,6 +19,7 @@ function App() {
     <div className="App main-layout">
       <BrowserRouter>
       <Wrapper>
+        <Overlay/>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
