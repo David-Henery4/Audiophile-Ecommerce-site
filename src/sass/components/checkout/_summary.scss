@@ -70,6 +70,7 @@
     &__amount{
       font-size: 18px;
       font-weight: $fontWeightBold;
+      // color: $colourPrimary;
     }
   }
   &-detail-type{ // Wrap for single name & amounts
@@ -81,6 +82,7 @@
 
   &-grand-total{
     margin-top: 16px;
+    color: $colourPrimary;
   }
 
   // SUBMIT BTN

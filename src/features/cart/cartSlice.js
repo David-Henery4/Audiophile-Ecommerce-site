@@ -3,6 +3,9 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   cartItems: [],
   cartTotal: 0,
+  shippingFee: 50,
+  grandTotal: 0,
+  vatFee: 0,
   isOverlayActive: false,
   isCartActive: false,
 }
@@ -73,6 +76,8 @@ const cartSlice = createSlice({
             total += item.totalPrice;
           });
           state.cartTotal = total
+          state.grandTotal = total + state.shippingFee;
+          state.vatFee = (20/100) * total
     }
   }
 });
