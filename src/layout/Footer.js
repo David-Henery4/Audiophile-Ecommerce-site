@@ -14,9 +14,11 @@ const Footer = () => {
     if (!location.pathname.includes("/product")) setIsProductPage(false);
   }, [location.pathname])
   return (
-    <footer className="footer" style={{gridRow: isProductPage && "9/10"}}>
+    <footer className="footer" style={{ gridRow: isProductPage && "9/10" }}>
       <div className="footer__line"></div>
-      <Logo className="footer__logo" />
+      <a className="footer__logo" href="#nav">
+        <Logo className="footer__logo" />
+      </a>
       <ul className="footer-links sub-title-style">
         {linkListData.map((li) => {
           return (

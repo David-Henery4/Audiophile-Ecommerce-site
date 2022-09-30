@@ -1,6 +1,6 @@
 .btn-basic-1,
 .btn-basic-2,
-.btn-basic-3{
+.btn-basic-3 {
   width: 160px;
   height: 48px;
   font-size: 13px;
@@ -8,32 +8,45 @@
   font-weight: $fontWeightBold;
   border: none;
   font-family: $fontFamily;
-  &:hover{
+  &:hover {
     cursor: pointer;
   }
 }
 
-.btn-basic-1{
+.btn-basic-1 {
   background-color: $colourPrimary;
   color: $white;
+  &:hover {
+    background-color: $colorPrimaryLight;
+  }
 }
-.btn-basic-2{
+.btn-basic-2 {
   background-color: transparent;
   border: 1.6px solid $black;
+  &:hover{
+    border: none;
+    color: $white;
+    background-color: $black;
+  }
 }
-.btn-basic-3{
+.btn-basic-3 {
   background-color: $black;
   color: $white;
+  &:hover {
+    background-color: $greyish;
+  }
 }
 
-.btn-back-basic{
+.btn-back-basic {
   background-color: transparent;
   border: none;
   font-size: 15px;
   font-weight: $fontWeightMedium;
   line-height: 25px;
   font-family: $fontFamily;
-  &:hover{
+  color: $greyish;
+  &:hover {
     cursor: pointer;
+    color: $colourPrimary;
   }
 }

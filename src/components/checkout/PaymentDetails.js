@@ -53,6 +53,7 @@ const PaymentDetails = () => {
               type="text"
               name="e-money-number"
               id="e-money-number"
+              placeholder="238521993"
             />
           </div>
           <div className="payment-number input-wrap">
@@ -67,6 +68,7 @@ const PaymentDetails = () => {
               type="text"
               name="e-money-pin"
               id="e-money-pin"
+              placeholder="6891"
             />
           </div>
         </div>

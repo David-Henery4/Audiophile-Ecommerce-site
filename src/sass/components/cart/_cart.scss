@@ -25,6 +25,10 @@
     &__remove-btn {
       background-color: transparent;
       border: none;
+      &:hover {
+        cursor: pointer;
+        color: $colourPrimary;
+      }
     }
   }
 
@@ -53,14 +57,26 @@
         align-items: center;
         width: 95%;
         max-width: 96px;
-        padding: 7px 15%;
-        background-color: lightgray; // temp
+        height: 32px;
+        background-color: $lightGrey; // temp
         grid-column: 7/-1;
         grid-row: 1/4;
         font-size: 13px;
-        &__minus {
+        &__minus,
+        &__plus {
+          width: 33%;
+          height: 100%;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          &:hover {
+            cursor: pointer;
+            color: $colourPrimary;
+          }
         }
         &__amount {
+          width: 33%;
+          text-align: center;
         }
         &__plus {
         }
@@ -90,6 +106,6 @@
   }
 }
 
-.cart-active{
+.cart-active {
   display: flex;
 }

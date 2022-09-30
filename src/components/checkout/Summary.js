@@ -1,15 +1,10 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
-import {xx59, xx99MK2, yx1} from "../../assets/cart"
 
 const Summary = () => {
   const { cartItems, cartTotal, shippingFee, grandTotal, vatFee } = useSelector(
     (store) => store.cart
   );
-  //
-  // will be using:       
-  // shipping: 50,
-  // vatTotal : (20/100) * (price * itemQuantity),
   //
   return (
     <section className="summary">
@@ -49,20 +44,19 @@ const Summary = () => {
         </div>
         <div className="summary-detail-type">
           <p className="summary-details__name body-text">VAT (INCLUDED)</p>
-          <p className="summary-details__amount">
-            ${Math.trunc(vatFee)}
-          </p>
+          <p className="summary-details__amount">${Math.trunc(vatFee)}</p>
         </div>
         <div className="summary-detail-type">
-          <p className="summary-details__name body-text">
-            GRAND TOTAL
-          </p>
+          <p className="summary-details__name body-text">GRAND TOTAL</p>
           <p className="summary-details__amount summary-grand-total">
             ${grandTotal}
           </p>
         </div>
       </div>
-      <button className="summary__submit-btn" disabled={cartItems.length <= 0}>
+      <button
+        className="summary__submit-btn btn-basic-1"
+        disabled={cartItems.length <= 0}
+      >
         CONTINUE & PAY
       </button>
     </section>

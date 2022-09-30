@@ -25,10 +25,10 @@ const BillingDetails = () => {
           </label>
           <input
             className="input-wrap__input"
-            type="text"
+            type="email"
             id="email"
             name="email"
-            placeholder=""
+            placeholder="alexei@mail.com"
           />
         </div>
         <div className="billing-fields__phone-num input-wrap">
@@ -40,6 +40,7 @@ const BillingDetails = () => {
             type="text"
             id="phone"
             name="phone"
+            placeholder="+1 202-555-0136"
           />
         </div>
       </fieldset>

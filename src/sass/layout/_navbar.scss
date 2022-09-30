@@ -37,6 +37,9 @@
     &__link:visited {
       color: $white;
       text-decoration: none;
+      &:hover{
+        color: $colourPrimary;
+      }
     }
   }
   &-logo {

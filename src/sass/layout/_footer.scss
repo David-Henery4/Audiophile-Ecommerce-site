@@ -59,6 +59,9 @@
     &__link:visited {
       color: $white;
       text-decoration: none;
+      &:hover{
+        color: $colourPrimary;
+      }
     }
   }
   &__desc {
@@ -105,6 +108,11 @@
       grid-row: 4/6;
     }
     &__icon {
+      fill: $white;
+      &:hover{
+        fill: $colourPrimary;
+        cursor: pointer;
+      }
     }
   }
 }

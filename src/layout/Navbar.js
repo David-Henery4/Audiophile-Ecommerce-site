@@ -25,7 +25,7 @@ const Navbar = () => {
   }
   //
   return (
-    <nav className="navbar">
+    <nav className="navbar" id="nav">
         {isDropDownNavActive && <CategoryList />}
       <div className="navbar-content">
         <div className="navbar-burger" onClick={handleDropDown}>

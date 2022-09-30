@@ -2,9 +2,6 @@ import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom"; 
 import { useSelector, useDispatch } from "react-redux";
 import {addToCart} from "../../features/cart/cartSlice";
-import { xx99MK2MobProduct } from "../../assets/product-xx99-mark-two-headphones/mobile";
-import { xx99MK2TabProduct } from "../../assets/product-xx99-mark-two-headphones/tablet";
-import { xx99MK2DeskProduct } from "../../assets/product-xx99-mark-two-headphones/desktop";
 import { useState } from "react";
 
 const SingleProduct = ({ id, name, image, price, description, newProduct }) => {
