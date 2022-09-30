@@ -60,14 +60,20 @@
     height: 48px;
     font-size: 13px;
     background-color: $lightGrey;
-    &--minus{
-
+    &--minus,
+    &--plus{
+    width: 33%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    &:hover{
+      cursor: pointer;
+    }
     }
     &--amount{
-      
-    }
-    &--plus{
-
+      width: 33%;
+      text-align: center;
     }
   }
 }

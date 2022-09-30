@@ -42,5 +42,8 @@
   &-logo {
   }
   &-cart {
+    &:hover{
+      cursor: pointer;
+    }
   }
 }

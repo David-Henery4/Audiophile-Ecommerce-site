@@ -2,6 +2,11 @@ import React from 'react'
 import {xx59, xx99MK2, yx1} from "../../assets/cart"
 
 const Summary = () => {
+  //
+  // will be using:       
+  // shipping: 50,
+  // vatTotal : (20/100) * (price * itemQuantity),
+  //
   return (
     <section className="summary">
       <h6 className="summary__title">SUMMARY</h6>
