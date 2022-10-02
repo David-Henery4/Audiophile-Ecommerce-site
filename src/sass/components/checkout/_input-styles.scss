@@ -13,6 +13,39 @@
     height: 56px;
     width: 100%;
     outline: none;
-    border: 1px solid grey; // color temp
+    border: 1px solid $greyish; // color temp
+    &:focus{
+      border: 1px solid $colourPrimary;
+    }
   }
 }
+
+.error-label-color{
+  color: $errorColor;
+}
+
+.error-label-text{
+  font-size: 12px;
+  font-weight: $fontWeightMedium;
+}
+
+.error-input-pos{
+  position: absolute;
+  top: -20px;
+  right: 0;
+}
+
+.error-input-border,
+.error-input-border:focus{
+  border: 1px solid $errorColor;
+}
+
+// .no-email{
+//   display: none;
+// }
+
+// .email:invalid + {
+//   .no-email{
+//     display: block;
+// }
+// }

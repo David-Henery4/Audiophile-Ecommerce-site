@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 
-const Summary = () => {
+const Summary = ({ handleSubmit }) => {
   const { cartItems, cartTotal, shippingFee, grandTotal, vatFee } = useSelector(
     (store) => store.cart
   );
@@ -54,6 +54,8 @@ const Summary = () => {
         </div>
       </div>
       <button
+        type="submit"
+        form="checkout-form"
         className="summary__submit-btn btn-basic-1"
         disabled={cartItems.length <= 0}
       >
@@ -61,6 +63,6 @@ const Summary = () => {
       </button>
     </section>
   );
-}
+};
 
 export default Summary

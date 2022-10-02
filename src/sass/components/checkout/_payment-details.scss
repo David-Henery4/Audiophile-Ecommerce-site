@@ -57,7 +57,8 @@
   &-numbers-wrap {
     @include flex-cen-cen-col;
     margin-top: 54px;
-    gap: 24px;
+    padding-bottom: 24px;
+    gap: 30px;
     @include respond(tab) {
       flex-direction: row;
     }
@@ -67,6 +68,22 @@
     &__label {
     }
     &__input {
+    }
+  }
+  &-delivery{
+    @include flex-cen-cen-col;
+    justify-content: space-around;
+    gap: 32px;
+    color: $greyish;
+    @include respond (lrgMob){
+      flex-direction: row;
+      // gap: 0px;
+    }
+    &__icon{
+      
+    }
+    &__text{
+      width: 75%;
     }
   }
 }
