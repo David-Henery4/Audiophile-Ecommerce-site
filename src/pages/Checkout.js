@@ -1,5 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 import { BackBtn } from "../components/product";
+import { useDispatch } from "react-redux";
+import { openOverlay, setIsOrderConfirmed } from "../features/cart/cartSlice";
 import {
   BillingDetails,
   PaymentDetails,
@@ -7,13 +9,16 @@ import {
   Summary,
   OrderConfirmation
 } from "../components/checkout";
-import { useState } from "react";
 import useForm from "../customHooks/useForm";
 
+
 const Checkout = () => {
+  const dispatch = useDispatch()
   //
   const callBackSubmit = () => {
     // callBack to handle submit// passed into the hook
+    dispatch(setIsOrderConfirmed("true"));
+    dispatch(openOverlay())
     console.log(values)
   }
   // custom hook

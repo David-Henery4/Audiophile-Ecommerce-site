@@ -8,6 +8,7 @@ const initialState = {
   vatFee: 0,
   isOverlayActive: false,
   isCartActive: false,
+  isOrderConfirmed: false,
 }
 
 const cartSlice = createSlice({
@@ -78,10 +79,19 @@ const cartSlice = createSlice({
           state.cartTotal = total
           state.grandTotal = total + state.shippingFee;
           state.vatFee = (20/100) * total
-    }
+    },
+    setIsOrderConfirmed: (state, {payload}) => {
+      console.log(payload)
+      if (payload === "true"){
+        state.isOrderConfirmed = true
+      }
+      if (payload === "false"){
+        state.isOrderConfirmed = false
+      }
+    },
   }
 });
 
 export default cartSlice.reducer
 
-export const {toggleOverlay, toggleCart, closeOverlay, openOverlay, closeCart, openCart, addToCart, clearCart, changeCartItemQuantity, getCartTotal} = cartSlice.actions
+export const {toggleOverlay, toggleCart, closeOverlay, openOverlay, closeCart, openCart, addToCart, clearCart, changeCartItemQuantity, getCartTotal, setIsOrderConfirmed} = cartSlice.actions

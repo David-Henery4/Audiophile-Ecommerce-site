@@ -12,27 +12,35 @@ import linkListData from "../link-list-data/linkListData";
 
 const Navbar = () => {
   const { isDropDownNavActive } = useSelector((store) => store.store);
+  const { isOrderConfirmed } = useSelector((store) => store.cart);
   const dispatch = useDispatch()
   //
   const handleToggleCart = () => {
-    dispatch(toggleOverlay())
-    dispatch(toggleCart())
+    if (!isOrderConfirmed){
+      dispatch(toggleOverlay())
+      dispatch(toggleCart())
+    }
   }
   //
   const handleDropDown = () => {
-    dispatch(toggleDropDownNav())
-    dispatch(toggleOverlay());
+    if (!isOrderConfirmed) {
+      dispatch(toggleDropDownNav())
+      dispatch(toggleOverlay());
+    }
   }
   //
   return (
     <nav className="navbar" id="nav">
-        {isDropDownNavActive && <CategoryList />}
+      {isDropDownNavActive && <CategoryList />}
       <div className="navbar-content">
         <div className="navbar-burger" onClick={handleDropDown}>
           <Burger />
         </div>
         <div className="navbar-logo">
-          <Link to="/">
+          <Link
+            style={{ pointerEvents: isOrderConfirmed ? "none" : "" }}
+            to="/"
+          >
             <Logo />
           </Link>
         </div>
@@ -40,7 +48,11 @@ const Navbar = () => {
           {linkListData.map((li) => {
             return (
               <li key={li.id}>
-                <Link to={li.path} className="navbar-links__link">
+                <Link
+                  style={{ pointerEvents: isOrderConfirmed ? "none" : "" }}
+                  to={li.path}
+                  className="navbar-links__link"
+                >
                   <p>{li.linkTo}</p>
                 </Link>
               </li>

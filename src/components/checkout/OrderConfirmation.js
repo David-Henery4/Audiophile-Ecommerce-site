@@ -1,11 +1,20 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import {setIsOrderConfirmed, closeOverlay, clearCart} from "../../features/cart/cartSlice";
+import { Link } from "react-router-dom"; 
 import { ConfirmedOrderIcon } from "../../assets/svgsComps";
 // might have as image
 import {xx99MK2} from "../../assets/cart";
 
 const OrderConfirmation = () => {
+  const dispatch = useDispatch()
+  const { isOrderConfirmed } = useSelector((store) => store.cart);
   return (
-    <div className="confirmation">
+    <div
+      className={
+        isOrderConfirmed ? "confirmation confirmation-active" : "confirmation"
+      }
+    >
       <ConfirmedOrderIcon className="confirmation__icon" />
       <div className="confirmation-header">
         <h3 className="confirmation-header__title">THANK YOU FOR YOUR ORDER</h3>
@@ -45,7 +54,18 @@ const OrderConfirmation = () => {
         {/**/}
       </div>
       {/**/}
-      <button className="confirmation__btn btn-basic-1">BACK TO HOME</button>
+      <Link className="confirmation__btn" to="/">
+        <button
+          className="confirmation__btn btn-basic-1"
+          onClick={() => {
+            dispatch(setIsOrderConfirmed("false"));
+            dispatch(closeOverlay());
+            dispatch(clearCart())
+          }}
+        >
+          BACK TO HOME
+        </button>
+      </Link>
     </div>
   );
 };
