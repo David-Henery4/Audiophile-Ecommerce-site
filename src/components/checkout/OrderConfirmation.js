@@ -1,14 +1,18 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import {setIsOrderConfirmed, closeOverlay, clearCart} from "../../features/cart/cartSlice";
+import {setIsOrderConfirmed, closeOverlay, clearCart, } from "../../features/cart/cartSlice";
 import { Link } from "react-router-dom"; 
 import { ConfirmedOrderIcon } from "../../assets/svgsComps";
 // might have as image
 import {xx99MK2} from "../../assets/cart";
+import { useState } from "react";
 
 const OrderConfirmation = () => {
+  const [showAllItems, setShowAllItems] = useState(false)
   const dispatch = useDispatch()
-  const { isOrderConfirmed } = useSelector((store) => store.cart);
+  const { isOrderConfirmed, cartItems, grandTotal } = useSelector(
+    (store) => store.cart
+  );
   return (
     <div
       className={
@@ -27,20 +31,32 @@ const OrderConfirmation = () => {
         {/**/}
         <div className="confirmation-info-top">
           <div className="confirmation-items">
-            <div className="confirmation-items-item">
-              <img
-                className="confirmation-items-item__image"
-                src={xx99MK2}
-                alt="item"
-              />
-              <p className="confirmation-items-item__name">xx99 MK II</p>
-              <p className="confirmation-items-item__price">$2,999</p>
-              <p className="confirmation-items-item__quantity">x1</p>
-            </div>
+            {cartItems.map((item, i) => {
+              if (i > 0 && !showAllItems) return null;
+              return (
+                <div key={item.id} className="confirmation-items-item">
+                  <img
+                    className="confirmation-items-item__image"
+                    src={require(`../../assets/${item.cartImage}`)}
+                    alt={`item-${item.nickName}-cart-img`}
+                  />
+                  <p className="confirmation-items-item__name">
+                    {item.nickName}
+                  </p>
+                  <p className="confirmation-items-item__price">{item.price}</p>
+                  <p className="confirmation-items-item__quantity">
+                    x{item.itemQuantity}
+                  </p>
+                </div>
+              );
+            })}
           </div>
           <div className="confirmation-items-total">
-            <p className="confirmation-items-total__text">
-              and 2 other item(s)
+            <p
+              className="confirmation-items-total__text"
+              onClick={() => setShowAllItems(!showAllItems)}
+            >
+              {showAllItems ? "View less" : `and ${cartItems.length - 1} other item(s)`}
             </p>
           </div>
         </div>
@@ -49,7 +65,9 @@ const OrderConfirmation = () => {
           <p className="confirmation-info-bottom__grand-title body-text">
             GRAND TOTAL
           </p>
-          <p className="confirmation-info-bottom__grand-amount">$5,446</p>
+          <p className="confirmation-info-bottom__grand-amount">
+            ${grandTotal}
+          </p>
         </div>
         {/**/}
       </div>
@@ -60,7 +78,7 @@ const OrderConfirmation = () => {
           onClick={() => {
             dispatch(setIsOrderConfirmed("false"));
             dispatch(closeOverlay());
-            dispatch(clearCart())
+            dispatch(clearCart());
           }}
         >
           BACK TO HOME

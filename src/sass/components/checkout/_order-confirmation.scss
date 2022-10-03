@@ -88,7 +88,9 @@
       font-weight: $fontWeightBold;
       color: $greyish;
       &__text{
-        
+        &:hover{
+          cursor: pointer;
+        }
       }
     }
   }
