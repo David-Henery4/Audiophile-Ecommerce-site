@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Product1Img, Product2Img, Product3Img } from "../../assets/home/mobile";
-import {ProductPattern, Product1ImgDesk, Product2ImgDesk, Product3ImgDesk} from "../../assets/home/desktop";
+import {ProductPattern, Product1ImgDesk, Product2ImgDesk, Product3ImgDesk , Circles} from "../../assets/home/desktop";
 import {ShowcaseImg2Tab, ShowcaseImg1Tab, ShowcaseImg3Tab} from "../../assets/home/tablet";
+import PatternImg from "../../assets/home/desktop/pattern-circles.svg"
+import CirclesImg from "../../assets/home/desktop/circles.svg"
+
 
 
 const ProductsShowcase = () => {
@@ -10,16 +13,22 @@ const ProductsShowcase = () => {
     <section className="products">
       {/* SHOWCASE ONE */}
       <div className="products-box products-box-1">
-        <ProductPattern className="products-box-1__pattern" />
-        <picture className="products-box-1__picture">
-          <source srcSet={Product1ImgDesk} media="(min-width:59.37em)" />
-          <source srcSet={ShowcaseImg1Tab} media="(min-width:43.75em)" />
+        <div className="products-box-1__picture">
+          <picture>
+            <source srcSet={Product1ImgDesk} media="(min-width:59.37em)" />
+            <source srcSet={ShowcaseImg1Tab} media="(min-width:43.75em)" />
+            <img
+              className="products-box-1__image"
+              srcSet={Product1Img}
+              alt="speaker-product"
+            />
+          </picture>
           <img
-            className="products-box-1__image"
-            srcSet={Product1Img}
-            alt="speaker-product"
+            className="products-box-1__pattern"
+            src={CirclesImg}
+            alt="circles-pattern"
           />
-        </picture>
+        </div>
         <div className="products-box-1__text-wrap">
           <h1 className="products-box-1__title">
             <span>Zx9</span>

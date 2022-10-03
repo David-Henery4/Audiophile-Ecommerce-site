@@ -17,39 +17,53 @@
     text-align: center;
     color: $white;
     overflow: hidden;
-    @include respond (lap){
+    @include respond(lap) {
       height: 560px;
       justify-content: space-between;
       padding: 0 2rem;
       flex-direction: row;
     }
     &__pattern {
+      width: 48rem;
       position: absolute;
-      top: 0;
-      left: 0;
-      max-width: 100%;
-      height: 100%;
+      top: -80%;
+      left: -120%;
+      @include respond(tab) {
+        width: 65rem;
+        position: absolute;
+        top: -133%;
+        left: -183%;
+      }
+      @include respond(lap) {
+        width: 61rem;
+        position: absolute;
+        top: -130px;
+        left: -210px;
+      }
     }
-    &__picture{
-      @include respond (lap){
+    &__picture {
+      position: relative;
+      @include respond(lap) {
         align-self: flex-end;
         width: 50%;
       }
     }
     &__image {
       width: 14rem;
+      position: relative;
+      z-index: 5;
       // height: 40%;
-      @include respond (lap){
+      @include respond(lap) {
         width: 23rem;
         position: relative;
-        top: 15px
+        top: 15px;
       }
     }
-    &__text-wrap{
+    &__text-wrap {
       @include flex-cen-cen-col;
       gap: 2rem;
       z-index: 5;
-      @include respond (lap){
+      @include respond(lap) {
         align-items: flex-start;
         gap: 1.5rem;
         text-align: left;
@@ -65,7 +79,7 @@
       display: inline-flex;
       flex-direction: column;
       // gap: 5px;
-      @include respond(tab){
+      @include respond(tab) {
         @include h1-style;
       }
       span {
@@ -76,7 +90,6 @@
       max-width: 349px;
     }
     &__btn {
-
     }
   }
   //
@@ -90,11 +103,11 @@
     @include flex-cen-cen-col;
     align-items: flex-start;
     gap: 20px;
-    @include respond (tab){
-      padding:  0 4rem;
+    @include respond(tab) {
+      padding: 0 4rem;
     }
-    @include respond (tab){
-      padding:  0 5rem;
+    @include respond(tab) {
+      padding: 0 5rem;
     }
     &__image {
       position: absolute;
@@ -117,7 +130,7 @@
   &-box-3 {
     @include flex-cen-cen-col;
     gap: 2rem;
-    @include respond (tab){
+    @include respond(tab) {
       flex-direction: row;
       gap: 1rem;
     }
@@ -125,7 +138,7 @@
     &-side-2 {
       width: 100%;
       height: 20.1rem;
-      @include respond(tab){
+      @include respond(tab) {
         width: 50%;
       }
     }
