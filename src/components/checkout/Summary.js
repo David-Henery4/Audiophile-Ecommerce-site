@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 
-const Summary = ({ handleSubmit }) => {
+const Summary = () => {
   const { cartItems, cartTotal, shippingFee, grandTotal, vatFee } = useSelector(
     (store) => store.cart
   );

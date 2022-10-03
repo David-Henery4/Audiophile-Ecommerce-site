@@ -36,8 +36,6 @@ const cartSlice = createSlice({
       state.isCartActive = true
     },
     addToCart: (state, {payload}) => {
-      console.log(payload)
-      // might have to create condition to prevent adding multiple of the same.
       const duplicate = state.cartItems.some((item) => {
         return item.id === payload.id
       })

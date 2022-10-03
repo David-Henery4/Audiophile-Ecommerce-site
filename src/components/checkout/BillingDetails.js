@@ -38,8 +38,6 @@ const BillingDetails = ({ handleChange, errors, values }) => {
             type="text"
             id="name"
             name="name"
-            // onInput={handleRequired}
-            // onInvalid={handleRequired}
             placeholder="Alexi Ward"
             onChange={handleChange}
             required

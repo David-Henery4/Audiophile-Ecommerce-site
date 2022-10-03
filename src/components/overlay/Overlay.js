@@ -1,11 +1,9 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { useLocation } from 'react-router-dom';
-import {toggleCart, toggleOverlay, closeOverlay, closeCart} from "../../features/cart/cartSlice";
+import {closeOverlay, closeCart} from "../../features/cart/cartSlice";
 import {closeDropDownNav} from "../../features/store/storeSlice";
 
 const Overlay = () => {
-  const location = useLocation();
   const dispatch = useDispatch();
   const { isOverlayActive, isOrderConfirmed } = useSelector(
     (store) => store.cart

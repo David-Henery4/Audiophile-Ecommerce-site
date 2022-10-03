@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Product1Img, Product2Img, Product3Img } from "../../assets/home/mobile";
-import {ProductPattern, Product1ImgDesk, Product2ImgDesk, Product3ImgDesk , Circles} from "../../assets/home/desktop";
+import {Product1ImgDesk, Product2ImgDesk, Product3ImgDesk} from "../../assets/home/desktop";
 import {ShowcaseImg2Tab, ShowcaseImg1Tab, ShowcaseImg3Tab} from "../../assets/home/tablet";
-import PatternImg from "../../assets/home/desktop/pattern-circles.svg"
 import CirclesImg from "../../assets/home/desktop/circles.svg"
 
 

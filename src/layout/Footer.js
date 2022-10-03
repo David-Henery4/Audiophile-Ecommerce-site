@@ -4,7 +4,7 @@ import linkListData from "../link-list-data/linkListData";
 import {Logo, Facebook, Instagram, Twitter} from "../assets/svgsComps";
 import { Link } from "react-router-dom";
 
-// "p" will be <Link> (temp)
+
 
 const Footer = () => {
   const [isProductPage, setIsProductPage] = useState(false)

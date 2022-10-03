@@ -3,8 +3,6 @@ import { useSelector, useDispatch } from "react-redux";
 import {setIsOrderConfirmed, closeOverlay, clearCart, } from "../../features/cart/cartSlice";
 import { Link } from "react-router-dom"; 
 import { ConfirmedOrderIcon } from "../../assets/svgsComps";
-// might have as image
-import {xx99MK2} from "../../assets/cart";
 import { useState } from "react";
 
 const OrderConfirmation = () => {

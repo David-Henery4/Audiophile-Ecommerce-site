@@ -1,5 +1,5 @@
 import React from "react";
-// DETAILS WILL BE DYNAMIC FROM DATA
+
 
 const CategoryHeader = ({ title }) => {
   return (

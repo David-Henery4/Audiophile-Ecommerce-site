@@ -1,7 +1,4 @@
 import React from 'react'
-import {galleryImgOneMob, galleryImgThreeMob, galleryImgTwoMob} from "../../assets/product-xx99-mark-two-headphones/mobile";
-import {galleryImgOneTab, galleryImgTwoTab,galleryImgThreeTab} from "../../assets/product-xx99-mark-two-headphones/tablet";
-import {galleryImgOneDesk, galleryImgTwoDesk, galleryImgThreeDesk} from "../../assets/product-xx99-mark-two-headphones/desktop";
 import { useEffect, useState } from 'react';
 
 const ProductGallery = ({gallery}) => {

@@ -1,11 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import {xx59MobSuggestion, xx99MK1MobSuggestion, zx9MobSuggestion} from "../../assets/shared/mobile";
-import {xx59TabSuggestion, xx99MK1TabSuggestion, xz9TabSuggestion} from "../../assets/shared/tablet";
-import {xx59DeskSuggestion,xx99MK1DeskSuggestion,xz9DeskSuggestion} from "../../assets/shared/desktop";
 
-// import {} from "../../assets/shared/desktop";
 const Suggestions = ({others}) => {
   
   return (

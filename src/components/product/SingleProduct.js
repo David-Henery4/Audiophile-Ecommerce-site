@@ -24,7 +24,6 @@ const SingleProduct = ({ id, name, image, price, description, newProduct }) => {
   //
   const handleAddItemToCart = (itemId) => {
     const foundItem = mainStoreData.find((item) => item.id === itemId);
-    // work out VAT % (20% OF TOTAL PRICE)
     const { id, price, nickName, cartImage } = foundItem;
     const itemToAdd = {
       id,

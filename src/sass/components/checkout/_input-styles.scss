@@ -13,7 +13,7 @@
     height: 56px;
     width: 100%;
     outline: none;
-    border: 1px solid $greyish; // color temp
+    border: 1px solid $greyish;
     &:focus{
       border: 1px solid $colourPrimary;
     }
@@ -40,12 +40,3 @@
   border: 1px solid $errorColor;
 }
 
-// .no-email{
-//   display: none;
-// }
-
-// .email:invalid + {
-//   .no-email{
-//     display: block;
-// }
-// }

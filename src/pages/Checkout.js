@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import { BackBtn } from "../components/product";
 import { useDispatch } from "react-redux";
 import { openOverlay, setIsOrderConfirmed } from "../features/cart/cartSlice";

@@ -3,7 +3,6 @@
   &-fields {
     width: 100%;
     border: none;
-    // gap: 57px;
     // RADIOS
     &__title {
       margin-bottom: 49px;
@@ -37,9 +36,9 @@
     }
     &-radio {
       height: 56px;
-      width: 100%; // for now
+      width: 100%;
       border-radius: 8px;
-      border: 1px solid grey; // colour temp
+      border: 1px solid grey;
       padding: 21px;
       @include flex-cen-cen-col;
       flex-direction: row;
@@ -92,10 +91,6 @@
   }
   &-number {
     width: 100%;
-    &__label {
-    }
-    &__input {
-    }
   }
   &-delivery{
     @include flex-cen-cen-col;
@@ -104,10 +99,6 @@
     color: $greyish;
     @include respond (lrgMob){
       flex-direction: row;
-      // gap: 0px;
-    }
-    &__icon{
-      
     }
     &__text{
       width: 75%;

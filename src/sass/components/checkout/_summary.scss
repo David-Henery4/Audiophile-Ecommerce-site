@@ -9,21 +9,20 @@
     margin-bottom: auto;
     width: 350px;
   }
-  &__title{ // main title
+  &__title{ 
     @include h6-style;
   }
-  &-items{ // Container for all items
+  &-items{
     width: 100%;
     @include flex-cen-cen-col;
     gap: 24px;
   }
-  &-single-item{ // Single item
+  &-single-item{
     display: grid;
     width: 100%;
     grid-template-columns: 64px repeat(12, 1fr);
     column-gap: 16px;
     grid-template-rows: repeat(3, 1fr);
-    // column-gap: 16px;
     &__image{
       grid-column: 1/2;
       grid-row: 1/7;
@@ -36,7 +35,6 @@
       grid-column: 2/8;
       grid-row: 1/3;
       font-size: 15px;
-      // line-height: 25px;
       font-weight: $fontWeightBold;
       text-transform: uppercase;
       align-self: center;
@@ -45,14 +43,12 @@
       grid-column: 2/8;
       grid-row: 2/4;
       font-size: 14px;
-      // line-height: 25px;
       align-self: center;
     }
     &__quantity{
       grid-column: 10/-1;
       grid-row: 1/3;
       font-size: 15px;
-      // line-height: 25px;
       justify-self: flex-end;
       align-self: center;
     }
@@ -64,13 +60,9 @@
     @include flex-cen-cen-col;
     gap: 8px;
     // Single price details
-    &__name{
-      
-    }
     &__amount{
       font-size: 18px;
       font-weight: $fontWeightBold;
-      // color: $colourPrimary;
     }
   }
   &-detail-type{ // Wrap for single name & amounts

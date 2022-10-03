@@ -10,7 +10,6 @@ const PaymentDetails = ({ handleChange, errors, values }) => {
   const handleSetRadio = (e) => {
     setPaymethod(e.target.value)
     setEvent(e)
-    // handleChange(e)
   }
   //
   useEffect(() => {

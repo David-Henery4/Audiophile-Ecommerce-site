@@ -6,7 +6,6 @@
   top: 18vh;
   border-radius: 8px;
   right: 0;
-  // min-height: 488px;
   width: 100%;
   max-width: 377px;
   padding: 31px 28px;
@@ -58,7 +57,7 @@
         width: 95%;
         max-width: 96px;
         height: 32px;
-        background-color: $lightGrey; // temp
+        background-color: $lightGrey;
         grid-column: 7/-1;
         grid-row: 1/4;
         font-size: 13px;
@@ -77,8 +76,6 @@
         &__amount {
           width: 33%;
           text-align: center;
-        }
-        &__plus {
         }
       }
     }

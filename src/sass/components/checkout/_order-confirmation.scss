@@ -13,10 +13,7 @@
   @include flex-cen-cen-col;
   align-items: flex-start;
   gap: 23px;
-  display: none; // temp
-  &__icon{
-    
-  }
+  display: none;
 
   &-header{
     width: 100%;
