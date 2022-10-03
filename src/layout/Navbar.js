@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {toggleOverlay, toggleCart} from "../features/cart/cartSlice";
-import {toggleDropDownNav, closeDropDownNav, openDropDownNav} from "../features/store/storeSlice";
+import {toggleDropDownNav} from "../features/store/storeSlice";
 import { Burger, Logo, CartIcon } from "../assets/svgsComps";
 import { Cart } from "../components/cart";
 import {CategoryList} from "../components/repeating";
@@ -12,7 +12,7 @@ import linkListData from "../link-list-data/linkListData";
 
 const Navbar = () => {
   const { isDropDownNavActive } = useSelector((store) => store.store);
-  const { isOrderConfirmed } = useSelector((store) => store.cart);
+  const { isOrderConfirmed, cartItems } = useSelector((store) => store.cart);
   const dispatch = useDispatch()
   //
   const handleToggleCart = () => {
@@ -59,10 +59,10 @@ const Navbar = () => {
             );
           })}
         </ul>
-        {/* TEMP CHECKOUT LINK WILL BE ON CART MENU NOT ICON */}
-        {/* <Link to="/checkout">
-          </Link> */}
         <div className="navbar-cart" onClick={handleToggleCart}>
+          {cartItems.length >= 1 && (
+            <div className="navbar-cart-amount">{cartItems.length}</div>
+          )}
           <CartIcon />
         </div>
         <Cart />

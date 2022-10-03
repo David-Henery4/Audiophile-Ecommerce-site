@@ -2,7 +2,6 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link} from "react-router-dom";
 import {toggleCart, toggleOverlay, clearCart, changeCartItemQuantity, getCartTotal} from "../../features/cart/cartSlice";
-import { xx59, xx99MK2, yx1 } from "../../assets/cart";
 import { useEffect } from "react";
 
 const Cart = () => {

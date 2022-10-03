@@ -5,10 +5,10 @@
   display: grid;
   grid-template-columns: 1fr repeat(8, 11%) 1fr;
   z-index: 11;
-  @include respond (lrgDesk){
+  @include respond(lrgDesk) {
     grid-template-columns: 1fr repeat(8, 138.75px) 1fr;
   }
-  &-content{
+  &-content {
     position: relative;
     grid-column: 2/10;
     display: flex;
@@ -37,7 +37,7 @@
     &__link:visited {
       color: $white;
       text-decoration: none;
-      &:hover{
+      &:hover {
         color: $colourPrimary;
       }
     }
@@ -45,7 +45,21 @@
   &-logo {
   }
   &-cart {
-    &:hover{
+    position: relative;
+    &-amount {
+      position: absolute;
+      right: 0;
+      top: -18px;
+      background-color: $colourPrimary;
+      border-radius: 50%;
+      min-width: 22px;
+      min-height: 22px;
+      color: $white;
+      display: grid;
+      place-items: center;
+      font-size: 12px;
+    }
+    &:hover {
       cursor: pointer;
     }
   }
