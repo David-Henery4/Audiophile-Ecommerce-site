@@ -27,7 +27,8 @@ const Footer = () => {
         {linkListData.map((li) => {
           return (
             <li key={li.id}>
-              <Link to={li.path} className="footer-links__link">
+              <Link to={li.path} className="footer-links__link" style={
+                    { color: location.pathname === li.path && "#D87D4A" }}>
                 <p>{li.linkTo}</p>
               </Link>
             </li>
