@@ -23,6 +23,7 @@ const Header = () => {
         <source srcSet={headerImgTab} media="(min-width:34.68em)" />
         <img
           className="header__image"
+          src={headerImage}
           srcSet={headerImage}
           alt="headerphones-header"
         />

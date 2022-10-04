@@ -41,9 +41,8 @@ Users should be able to:
 
 ### Links
 
-**(Links to be added!)**
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/audiophileecommerce-react-reactrouter-reduxtoolkit-sass-grid-NgFbFZAGsv)
+- Live Site: [Audiophile-Ecommerce](https://audiophile-ecommerce-store.netlify.app)
 
 ## My process
 
@@ -163,7 +162,7 @@ In the future I will definitely be researching more about form validation, as it
 - [Blog Post](https://dev.to/codebucks/form-validation-in-reactjs-by-building-reusable-custom-hook-1bg7) - This is the dev.to blog post by CodeBucks, which helped me understand the idea and benefits of implementing form validation with a custom hook.
 
 - [Blog Post](https://felixgerschau.com/react-hooks-form-validation-typescript/#conclusion) -
-Here is another blog post about custom hooks that you might find helpfull.
+Here is another blog post about custom hooks that you might find Interesting.
 
 ## Author
 

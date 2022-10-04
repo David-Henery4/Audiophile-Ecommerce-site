@@ -18,6 +18,7 @@ const CategoryProduct = ({name, categoryImage, slug, description, newProduct}) =
           />
           <img
             className="category-product-image__img"
+            src={require(`../../assets/${mobile}`)}
             srcSet={require(`../../assets/${mobile}`)}
             alt="category-product-preview"
           />

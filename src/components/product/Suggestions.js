@@ -23,6 +23,7 @@ const Suggestions = ({others}) => {
                 />
                 <img
                   className="suggestions-item__image"
+                  src={require(`../../assets/${mobile}`)}
                   srcSet={require(`../../assets/${mobile}`)}
                   alt={`suggested-item-${i + 1}`}
                 />

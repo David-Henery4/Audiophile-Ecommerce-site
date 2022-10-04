@@ -5,12 +5,13 @@ import AboutImgDesk from "../../assets/shared/desktop/image-best-gear.jpg";
 
 const About = ({ isProductPage = false }) => {
   return (
-    <section className="about" style={{gridRow: isProductPage && "8/9"}}>
+    <section className="about" style={{ gridRow: isProductPage && "8/9" }}>
       <picture className="about__picture">
         <source srcSet={AboutImgDesk} media="(min-width:59.37em)" />
         <source srcSet={AboutImgTab} media="(min-width:43.75em)" />
         <img
           className="about__image"
+          src={AboutImgMob}
           srcSet={AboutImgMob}
           alt="about-best-gear"
         />
@@ -21,14 +22,14 @@ const About = ({ isProductPage = false }) => {
           <span> best </span>
           audio gear
         </h2>
-        <article className="about__desc body-text">
+        <p className="about__desc body-text">
           Located at the heart of New York City, Audiophile is the premier store
           for high end headphones, earphones, speakers, and audio accessories.
           We have a large showroom and luxury demonstration rooms available for
           you to browse and experience a wide range of our products. Stop by our
           store to meet some of the fantastic people who make Audiophile the
           best place to buy your portable audio equipment.
-        </article>
+        </p>
       </div>
     </section>
   );

@@ -29,6 +29,7 @@ const ProductGallery = ({gallery}) => {
           <img
             className="product-gallery-sml-img"
             src={firstImg && require(`../../assets/${firstImg.mobile}`)}
+            srcSet={firstImg && require(`../../assets/${firstImg.mobile}`)}
             alt="gallery-sml-img-1"
           />
         </picture>
@@ -46,6 +47,7 @@ const ProductGallery = ({gallery}) => {
           />
           <img
             className="product-gallery-sml-img"
+            src={secondImg && require(`../../assets/${secondImg.mobile}`)}
             srcSet={secondImg && require(`../../assets/${secondImg.mobile}`)}
             alt="gallery-sml-img-2"
           />
@@ -57,9 +59,13 @@ const ProductGallery = ({gallery}) => {
             srcSet={thirdImg && require(`../../assets/${thirdImg.desktop}`)}
             media="(min-width: 59.37em)"
           />
-          <source srcSet={thirdImg && require(`../../assets/${thirdImg.tablet}`)} media="(min-width: 43.75em)" />
+          <source
+            srcSet={thirdImg && require(`../../assets/${thirdImg.tablet}`)}
+            media="(min-width: 43.75em)"
+          />
           <img
             className="product-gallery-lrg-img__image"
+            src={thirdImg && require(`../../assets/${thirdImg.mobile}`)}
             srcSet={thirdImg && require(`../../assets/${thirdImg.mobile}`)}
             alt="gallery-lrg-img"
           />

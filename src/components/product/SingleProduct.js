@@ -54,6 +54,7 @@ const SingleProduct = ({ id, name, image, price, description, newProduct }) => {
           />
           <img
             className="single-product__image"
+            src={image && require(`../../assets/${image.mobile}`)}
             srcSet={image && require(`../../assets/${image.mobile}`)}
             alt="single-product"
           />
@@ -80,7 +81,10 @@ const SingleProduct = ({ id, name, image, price, description, newProduct }) => {
               +
             </i>
           </div>
-          <button className="btn-basic-1" onClick={() => handleAddItemToCart(id)}>
+          <button
+            className="btn-basic-1"
+            onClick={() => handleAddItemToCart(id)}
+          >
             ADD TO CART
           </button>
         </div>

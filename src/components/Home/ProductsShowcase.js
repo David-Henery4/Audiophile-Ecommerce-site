@@ -18,6 +18,7 @@ const ProductsShowcase = () => {
             <source srcSet={ShowcaseImg1Tab} media="(min-width:43.75em)" />
             <img
               className="products-box-1__image"
+              src={Product1Img}
               srcSet={Product1Img}
               alt="speaker-product"
             />
@@ -51,6 +52,7 @@ const ProductsShowcase = () => {
           <source srcSet={ShowcaseImg2Tab} media="(min-width:43.75em)" />
           <img
             className="products-box-2__image"
+            src={Product2Img}
             srcSet={Product2Img}
             alt="speaker-product-2"
           />
@@ -70,6 +72,7 @@ const ProductsShowcase = () => {
             <source srcSet={ShowcaseImg3Tab} media="(min-width:43.75em)" />
             <img
               className="products-box-3__image"
+              src={Product3Img}
               srcSet={Product3Img}
               alt="earphones-product"
             />
