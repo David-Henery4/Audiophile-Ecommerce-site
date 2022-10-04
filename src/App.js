@@ -1,5 +1,5 @@
 import { useLayoutEffect } from "react";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation, Outlet } from "react-router-dom";
 import { Category, Checkout, Home, Product } from "./pages";
 import { Navbar, Footer } from "./layout";
 import { Overlay } from "./components/overlay";
@@ -15,7 +15,7 @@ const Wrapper = ({ children }) => {
 // WILL USE "SLUG" FOR PRODUCTS
 function App() {
   return (
-    <div className="App main-layout">
+    <main className="App main-layout">
       <BrowserRouter>
         <Wrapper>
           <Overlay />
@@ -29,7 +29,7 @@ function App() {
           <Footer />
         </Wrapper>
       </BrowserRouter>
-    </div>
+    </main>
   );
 }
 

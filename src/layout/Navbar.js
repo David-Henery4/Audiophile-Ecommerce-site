@@ -52,6 +52,7 @@ const Navbar = () => {
           <Link
             style={{ pointerEvents: isOrderConfirmed ? "none" : "" }}
             to="/"
+            aria-label="navbar logo link to home page"
           >
             <Logo />
           </Link>

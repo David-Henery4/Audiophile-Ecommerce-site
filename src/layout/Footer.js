@@ -23,7 +23,11 @@ const Footer = () => {
         {linkListData.map((li) => {
           return (
             <li key={li.id}>
-              <Link to={li.path} className="footer-links__link">
+              <Link
+                aria-label="footer logo link to home page"
+                to={li.path}
+                className="footer-links__link"
+              >
                 <p>{li.linkTo}</p>
               </Link>
             </li>

@@ -24,7 +24,7 @@ const CategoryList = ({ isProductPage = false }) => {
       }
       style={{ gridRow: isProductPage && "7/8" }}
     >
-      <section className="categories-box">
+      <div className="categories-box">
         <div className="categories-box-underlay"></div>
         <img
           className="categories-box__image"
@@ -40,8 +40,8 @@ const CategoryList = ({ isProductPage = false }) => {
           <p className="categories-box-btn__text">SHOP</p>
           <ArrowRight className="categories-box-btn__icon" />
         </Link>
-      </section>
-      <section className="categories-box">
+      </div>
+      <div className="categories-box">
         <div className="categories-box-underlay"></div>
         <img className="categories-box__image" src={speakers} alt="speakers" />
         <p className="categories-box__name">SPEAKERS</p>
@@ -53,8 +53,8 @@ const CategoryList = ({ isProductPage = false }) => {
           <p className="categories-box-btn__text">SHOP</p>
           <ArrowRight className="categories-box-btn__icon" />
         </Link>
-      </section>
-      <section className="categories-box">
+      </div>
+      <div className="categories-box">
         <div className="categories-box-underlay"></div>
         <img
           className="categories-box__image"
@@ -70,7 +70,7 @@ const CategoryList = ({ isProductPage = false }) => {
           <p className="categories-box-btn__text">SHOP</p>
           <ArrowRight className="categories-box-btn__icon" />
         </Link>
-      </section>
+      </div>
     </div>
   );
 };
