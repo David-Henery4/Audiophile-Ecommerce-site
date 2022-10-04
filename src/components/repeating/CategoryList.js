@@ -24,7 +24,7 @@ const CategoryList = ({ isProductPage = false }) => {
       }
       style={{ gridRow: isProductPage && "7/8" }}
     >
-      <div className="categories-box">
+      <div role="contentinfo" className="categories-box">
         <div className="categories-box-underlay"></div>
         <img
           className="categories-box__image"
@@ -41,7 +41,7 @@ const CategoryList = ({ isProductPage = false }) => {
           <ArrowRight className="categories-box-btn__icon" />
         </Link>
       </div>
-      <div className="categories-box">
+      <div role="contentinfo" className="categories-box">
         <div className="categories-box-underlay"></div>
         <img className="categories-box__image" src={speakers} alt="speakers" />
         <p className="categories-box__name">SPEAKERS</p>
@@ -54,7 +54,7 @@ const CategoryList = ({ isProductPage = false }) => {
           <ArrowRight className="categories-box-btn__icon" />
         </Link>
       </div>
-      <div className="categories-box">
+      <div role="contentinfo" className="categories-box">
         <div className="categories-box-underlay"></div>
         <img
           className="categories-box__image"
