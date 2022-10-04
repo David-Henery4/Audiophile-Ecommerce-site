@@ -81,6 +81,12 @@
     justify-self: center;
     width: 160px;
     height: 48px;
+    display: grid;
+    place-items: center;
+    &:link,
+    &:visited{
+      text-decoration: none;
+    }
     @include respond(lap) {
       grid-column: 2/6;
       grid-row: 13/15;

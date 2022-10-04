@@ -16,18 +16,18 @@ const Footer = () => {
   return (
     <footer className="footer" style={{ gridRow: isProductPage && "9/10" }}>
       <div className="footer__line"></div>
-      <a className="footer__logo" href="#nav">
+      <a
+        className="footer__logo"
+        href="#nav"
+        aria-label="footer logo link to home page"
+      >
         <Logo className="footer__logo" />
       </a>
       <ul className="footer-links sub-title-style">
         {linkListData.map((li) => {
           return (
             <li key={li.id}>
-              <Link
-                aria-label="footer logo link to home page"
-                to={li.path}
-                className="footer-links__link"
-              >
+              <Link to={li.path} className="footer-links__link">
                 <p>{li.linkTo}</p>
               </Link>
             </li>

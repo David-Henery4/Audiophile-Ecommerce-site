@@ -37,8 +37,11 @@ const Header = () => {
         Experience natural, lifelike audio and exceptional build quality made
         for the passionate music enthusiast.
       </p>
-      <Link className="header__btn" to={`/product/${headerProductSlug}`}>
-        <button className="btn-basic-1">SEE PRODUCT</button>
+      <Link
+        className="header__btn btn-basic-1"
+        to={`/product/${headerProductSlug}`}
+      >
+        <p>SEE PRODUCT</p>
       </Link>
     </header>
   );

@@ -62,7 +62,10 @@ const Navbar = () => {
             return (
               <li key={li.id}>
                 <Link
-                  style={{ pointerEvents: isOrderConfirmed ? "none" : "" }}
+                  style={
+                    ({ pointerEvents: isOrderConfirmed ? "none" : "" },
+                    { color: location.pathname === li.path && "#D87D4A" })
+                  }
                   to={li.path}
                   className="navbar-links__link"
                 >

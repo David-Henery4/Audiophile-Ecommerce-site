@@ -30,10 +30,10 @@ const ProductsShowcase = () => {
           />
         </div>
         <div className="products-box-1__text-wrap">
-          <h1 className="products-box-1__title">
+          <h2 className="products-box-1__title">
             <span>Zx9</span>
             speaker
-          </h1>
+          </h2>
           <p className="products-box-1__text body-text">
             Upgrade to premium speakers that are phenomenally built to deliver
             truly remarkable sound. See product
@@ -58,7 +58,7 @@ const ProductsShowcase = () => {
             alt="speaker-product-2"
           />
         </picture>
-        <h4 className="products-box-2__title">ZX7 speaker</h4>
+        <h3 className="products-box-2__title">ZX7 speaker</h3>
         <Link
           className="products-box-2__btn btn-basic-2"
           to="/product/zx7-speaker"
