@@ -86,6 +86,19 @@
     &__text {
       max-width: 349px;
     }
+        &__btn,
+    &__btn:link,
+    &__btn:visited{
+      display: grid;
+      color: $white;
+      text-decoration: none;
+      place-items: center;
+      &:hover{
+        background-color: $greyish;
+        border: none;
+        color: $white;
+      }
+    }
   }
   //
   // BOX #2
@@ -116,6 +129,19 @@
     &__title {
       text-transform: uppercase;
       @include h4-style;
+    }
+        &__btn,
+    &__btn:link,
+    &__btn:visited{
+      display: grid;
+      color: $black;
+      text-decoration: none;
+      place-items: center;
+      &:hover{
+        background-color: $black;
+        border: none;
+        color: $white;
+      }
     }
   }
   //
@@ -151,6 +177,19 @@
     &__title {
       text-transform: uppercase;
       @include h4-style;
+    }
+    &__btn,
+    &__btn:link,
+    &__btn:visited{
+      display: grid;
+      color: $black;
+      text-decoration: none;
+      place-items: center;
+      &:hover{
+        background-color: $black;
+        border: none;
+        color: $white;
+      }
     }
   }
 }

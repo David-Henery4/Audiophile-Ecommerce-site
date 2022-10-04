@@ -42,4 +42,12 @@
       @include h2-style;
     }
   }
+  &__btn,
+  &__btn:link,
+  &__btn:visited
+  {
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+  }
 }

@@ -38,10 +38,11 @@ const ProductsShowcase = () => {
             Upgrade to premium speakers that are phenomenally built to deliver
             truly remarkable sound. See product
           </p>
-          <Link to="/product/zx9-speaker">
-            <button className="products-box-1__btn btn-basic-3">
-              SEE PRODUCT
-            </button>
+          <Link
+            className="products-box-1__btn btn-basic-3"
+            to="/product/zx9-speaker"
+          >
+            <p>SEE PRODUCT</p>
           </Link>
         </div>
       </div>
@@ -58,10 +59,11 @@ const ProductsShowcase = () => {
           />
         </picture>
         <h4 className="products-box-2__title">ZX7 speaker</h4>
-        <Link to="/product/zx7-speaker">
-          <button className="products-box-2__btn btn-basic-2">
-            SEE PRODUCT
-          </button>
+        <Link
+          className="products-box-2__btn btn-basic-2"
+          to="/product/zx7-speaker"
+        >
+          <p>SEE PRODUCT</p>
         </Link>
       </div>
       {/*SHOWCASE THREE*/}
@@ -80,10 +82,11 @@ const ProductsShowcase = () => {
         </div>
         <div className="products-box-3-side-2">
           <h4 className="products-box-3__title">YX1 earphones</h4>
-          <Link to="/product/yx1-earphones">
-            <button className="products-box-3__btn btn-basic-2">
-              SEE PRODUCT
-            </button>
+          <Link
+            className="products-box-3__btn btn-basic-2"
+            to="/product/yx1-earphones"
+          >
+            <p>SEE PRODUCT</p>
           </Link>
         </div>
       </div>

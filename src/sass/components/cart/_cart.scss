@@ -98,8 +98,13 @@
   }
 
   // CHECKOUT BTN
-  &__checkout-btn {
+  &__checkout-btn,
+  &__checkout-btn:link,
+  &__checkout-btn:visited {
     width: 100%;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
   }
 }
 

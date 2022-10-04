@@ -116,8 +116,13 @@
   }
 
   // Confirmation BTN 
-  &__btn{
+  &__btn,
+  &__btn:link,
+  &__btn:visited{
     width: 100%;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
   }
 }
 

@@ -70,7 +70,7 @@ const Cart = () => {
         <p className="cart-pricing__price">${cartTotal}</p>
       </div>
       <Link to="/checkout" className="cart__checkout-btn" onClick={handleCheckoutClick}>
-        <button className="btn-basic-1 cart__checkout-btn" disabled={cartItems.length <= 0}>CHECKOUT</button>
+        <p className="btn-basic-1 cart__checkout-btn" disabled={cartItems.length <= 0}>CHECKOUT</p>
       </Link>
     </div>
   );

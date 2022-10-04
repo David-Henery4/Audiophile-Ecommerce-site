@@ -28,8 +28,11 @@ const CategoryProduct = ({name, categoryImage, slug, description, newProduct}) =
         <p className="overline">{newProduct ? "NEW PRODUCT" : " "}</p>
         <h2 className="category-product__title">{name.toUpperCase()}</h2>
         <p className="category-product__text body-text">{description}</p>
-        <Link to={`/product/${slug}`}>
-          <button className="btn-basic-1">SEE PRODUCT</button>
+        <Link
+          className="category-product__btn btn-basic-1"
+          to={`/product/${slug}`}
+        >
+          <p>SEE PRODUCT</p>
         </Link>
       </div>
     </div>

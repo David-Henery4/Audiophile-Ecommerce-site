@@ -54,7 +54,9 @@ const OrderConfirmation = () => {
               className="confirmation-items-total__text"
               onClick={() => setShowAllItems(!showAllItems)}
             >
-              {showAllItems ? "View less" : `and ${cartItems.length - 1} other item(s)`}
+              {showAllItems
+                ? "View less"
+                : `and ${cartItems.length - 1} other item(s)`}
             </p>
           </div>
         </div>
@@ -70,9 +72,8 @@ const OrderConfirmation = () => {
         {/**/}
       </div>
       {/**/}
-      <Link className="confirmation__btn" to="/">
-        <button
-          className="confirmation__btn btn-basic-1"
+      <Link className="confirmation__btn btn-basic-1" to="/">
+        <p
           onClick={() => {
             dispatch(setIsOrderConfirmed("false"));
             dispatch(closeOverlay());
@@ -80,7 +81,7 @@ const OrderConfirmation = () => {
           }}
         >
           BACK TO HOME
-        </button>
+        </p>
       </Link>
     </div>
   );
